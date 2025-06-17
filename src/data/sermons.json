@@ -1,8 +1,26 @@
 [
     {
-        "title": "Walking by Faith",
-        "date": "2025-05-11",
-        "audioUrl": "https://drive.google.com/file/d/1Jnx91Q5494QVCISYMcghk_hAd-NNr4LR/preview",
+        "title": "Day 1",
+        "date": "2025-06-01",
+        "audioUrl": "https://nydtab001.github.io/bohsermons/Youth_Week_of_Prayer_1.mp3",
+        "description": "This message unpacks the practical aspects of trusting God through uncertain times."
+    },
+    {
+        "title": "Day 2",
+        "date": "2025-06-02",
+        "audioUrl": "https://nydtab001.github.io/bohsermons/Youth_Week_of_Prayer_2.mp3",
+        "description": "This message unpacks the practical aspects of trusting God through uncertain times."
+    },
+    {
+        "title": "Day 4",
+        "date": "2025-06-04",
+        "audioUrl": "https://nydtab001.github.io/bohsermons/Youth_Week_of_Prayer_4.mp3",
+        "description": "This message unpacks the practical aspects of trusting God through uncertain times."
+    },
+    {
+        "title": "Day 5",
+        "date": "2025-06-05",
+        "audioUrl": "https://nydtab001.github.io/bohsermons/Youth_Week_of_Prayer_5.mp3",
         "description": "This message unpacks the practical aspects of trusting God through uncertain times."
     }
 ]

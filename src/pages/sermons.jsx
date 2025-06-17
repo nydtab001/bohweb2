@@ -24,27 +24,23 @@ function Sermons() {
       <Body primaryColor="denim" l-wrap>
         <div >
         <BasicPage
-          content={<><iframe
-  src="https://drive.google.com/file/d/1Jnx91Q5494QVCISYMcghk_hAd-NNr4LR/preview"
-  width="300"
-  height="60"
-  allow="autoplay"
-  title="Audio Sermon"
-  style={{ border: 'none' }}
-></iframe>
+          content={<>
 <div className="p-4 max-w-7xl mx-auto">
-  <h1 className="text-3xl font-bold mb-6">Sermons</h1>
-  
+  <h1 className="text-3xl font-bold mb-6">Youth Week of Prayer/AWR</h1>
+  <br></br>
   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     {sermons.map((sermon, index) => (
       <div key={index} className="bg-white shadow-md rounded-lg p-4">
         <h2 className="text-xl font-semibold">{sermon.title}</h2>
+        <div style={{height:'8px'}}></div>
         <p className="text-gray-600 text-sm mb-2">{sermon.date}</p>
+        <div style={{height:'3px'}}></div>
         <audio controls className="w-full">
           <source src={sermon.audioUrl} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        <p className="text-gray-700 mt-2">{sermon.description}</p>
+        {/* <p className="text-gray-700 mt-2">{sermon.description}</p> */}
+        <div style={{height:'20px'}}></div>
       </div>
     ))}
   </div>
