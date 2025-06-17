@@ -17,7 +17,7 @@ function Ministries() {
     <AlpsContextProvider>
       <Helmet>
         <title>
-          Ministries - Beacon of Hope Sevnth-day Adventist Church
+          Ministries - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
       <Body primaryColor="denim" l-wrap>

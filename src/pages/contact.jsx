@@ -18,7 +18,7 @@ function Contact(){
         <AlpsContextProvider>
           <Helmet>
         <title>
-          Contact Us - Beacon of Hope Sevnth-day Adventist Church
+          Contact Us - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
           <Body primaryColor="denim" l-wrap>

@@ -18,7 +18,7 @@ function Sermons() {
     <AlpsContextProvider>
       <Helmet>
         <title>
-          Sermons - Beacon of Hope Sevnth-day Adventist Church
+          Sermons - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
       <Body primaryColor="denim" l-wrap>

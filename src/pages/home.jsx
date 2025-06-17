@@ -19,7 +19,7 @@ function Home() {
       <AlpsContextProvider>
         <Helmet>
                 <title>
-                  Beacon of Hope Sevnth-day Adventist Church
+                  Beacon of Hope Seventh-day Adventist Church
                 </title>
               </Helmet>
         <Body primaryColor="denim" l-wrap>
