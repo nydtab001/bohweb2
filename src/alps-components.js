@@ -6,5 +6,7 @@ export { default as MediaBlock } from 'alps-react/dist/esm/molecules/blocks/Medi
 export { default as Sabbath } from 'alps-react/dist/esm/organisms/asides/Sabbath.js';
 export { default as TemplateWrap } from 'alps-react/dist/esm/templates/TemplateWrap.js'
 export { default as BasicPage } from 'alps-react/dist/esm/templates/BasicPage.js';
+export { default as BlankTemplate } from 'alps-react/dist/esm/templates/BlankTemplate.js';
 export { default as SDA } from 'alps-react/dist/esm/atoms/images/logos/SDA.js';
 export { default as Image } from 'alps-react/dist/esm/atoms/images/Image.js';
+export { default as PrimaryNavigation } from 'alps-react/dist/esm/molecules/navigation/PrimaryNavigation.js';

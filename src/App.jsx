@@ -3,16 +3,10 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/about.jsx";
-import Home from "./pages/home.jsx";
+import Home from "./pages/home2.jsx";
 import Contact from './pages/contact.jsx';
 import Ministries from './pages/ministries.jsx';
 import Sermons from './pages/sermons.jsx';
-
-
-import { Body,/* Div, Button, Blockquote, MediaBlock,
-  Sabbath, */BasicPage
-} from './alps-components.js'; // Import from your custom file
-//import { BOH } from './boh';
 
 function App() {
   return (
