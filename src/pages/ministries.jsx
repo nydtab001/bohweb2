@@ -7,6 +7,7 @@ import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-sv
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import SectionHeading from '../components/SectionHeading';
+import UnderConstruction from "../components/under_construction";
 
 const date = new Date();
 
@@ -28,6 +29,7 @@ function Ministries() {
         ]}
       />
       <SectionHeading title="Ministries"/>
+      <UnderConstruction/>
       <Footer/>
       </>
   );

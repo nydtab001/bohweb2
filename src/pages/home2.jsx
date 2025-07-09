@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import bohbg from "/bohbg.jpg";
+import UnderConstruction from "../components/under_construction";
+
 
 function Home(){
     return(
@@ -23,6 +25,7 @@ function Home(){
     </button>
   </div>
 </section>
+<UnderConstruction/>
 <Footer/>
 </>
     );
