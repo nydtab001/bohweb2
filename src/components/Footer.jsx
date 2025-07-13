@@ -54,6 +54,16 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a
+                href="https://www.instagram.com/beaconofhopesda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
               <a href="mailto:beaconofhope@wzc.adventist.org" className="hover:underline">
                 Email
               </a>

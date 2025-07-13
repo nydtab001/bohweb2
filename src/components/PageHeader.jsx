@@ -23,7 +23,7 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
               {item.label}
           </Link>
               <div className={`absolute top-full flex flex-col bg-white border shadow-md w-48 z-50 ${
-          isactive ? 'opacity-100' : 'max-h-0 opacity-0'}`}>
+          isactive ? 'opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
               {submenu?.map((sub,idx) => (
                 <>
                 <div
