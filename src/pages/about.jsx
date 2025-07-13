@@ -2,8 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 //import logo from './logo.svg';
 //import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import SectionHeading from '../components/SectionHeading';

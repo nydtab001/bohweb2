@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import bohbg from "/bohbg.jpg";
@@ -7,6 +8,11 @@ import UnderConstruction from "../components/under_construction";
 function Home(){
     return(
         <>
+        <Helmet>
+        <title>
+          Beacon of Hope Seventh-day Adventist Church
+        </title>
+      </Helmet>
         <PageHeader 
          navItems={[
           { label: "Home", href: "/" },

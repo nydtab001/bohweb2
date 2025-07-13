@@ -7,6 +7,7 @@ import Home from "./pages/home2.jsx";
 import Contact from './pages/contact.jsx';
 import Ministries from './pages/ministries.jsx';
 import Sermons from './pages/sermons.jsx';
+import Events from './pages/events.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/ministries" element={<Ministries/>}/>
       <Route path="/media/sermons" element={<Sermons/>}/>
+      <Route path="/media/events" element={<Events/>}/>
     </Routes>
     </Router>
   )

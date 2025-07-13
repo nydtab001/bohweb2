@@ -4,10 +4,10 @@ import logo from "/bohlogo.png"; // Update the path to your church logo
 import { useState } from 'react';
 import MobileDropdown from "./MobileDropdown";
 
-function renderDropDown(open,setopen, item, idx){
+function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownContent){
   const isactive = open === item.label
-  switch(item.label){
-    case "About Us ▼":
+  const subactive = subopen === dropdownContent[item.label].label
+  const submenu = dropdownContent[item.label];
       return(
         <>
         <div
@@ -22,77 +22,58 @@ function renderDropDown(open,setopen, item, idx){
           >
               {item.label}
           </Link>
-        {isactive && (
-              <div className="absolute top-full bg-white border rounded shadow-md py-2 w-48 z-50">
-                <a href="https://www.adventist.org/beliefs/" className="block px-4 py-2 hover:bg-gray-100">Official Beliefs</a>
-                <a href="https://gc.adventist.org/wp-content/uploads/2025/07/2022-Seventh-day-Adventist-Church-Manual.pdf" className="block px-4 py-2 hover:bg-gray-100">Church Manual</a>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">Church Leaders ▼</a>
+              <div className={`absolute top-full flex flex-col bg-white border shadow-md w-48 z-50 ${
+          isactive ? 'opacity-100' : 'max-h-0 opacity-0'}`}>
+              {submenu?.map((sub,idx) => (
+                <>
+                <div
+                onMouseEnter={() => setsub(sub.label)}
+                onMouseLeave={() => setsub(null)}
+                >
+                <Link 
+                key={idx}
+                to={sub.href}
+                className="block px-4 py-2 hover:bg-gray-100"
+                >
+                {sub.label}
+              </Link>
+              <div
+                className={subopen === sub.label ? 'opacity-100 bg-slate-600 text-white':'max-h-0 opacity-0'}
+              >
+              {sub.children?.map((subm,idxs) => (
+                  <Link 
+                key={idxs}
+                href={subm.href}
+                className="block px-4 py-2 hover:bg-blue-700">
+                  {subm.label}
+                  </Link>
+                ))}
+                </div>
+                </div>
+                </>            
+            ))}
               </div>
-            )}
         </div>
         </>
       )
-    case "Ministries ▼":
-      return(<>
-        <div
-        className="relative"
-        onMouseEnter={() => setopen(item.label)}
-        onMouseLeave={() => setopen(null)}
-        >
-          <Link
-          key={idx}
-          to={item.href} 
-          className="text-lg font-medium text-gray-700 hover:text-blue-900">{item.label}</Link>
-        {isactive && (
-              <div className="absolute top-full bg-white border rounded shadow-md py-2 w-48 z-50">
-                <a href="/ministries/youth" className="block px-4 py-2 hover:bg-gray-100">Youth</a>
-                <a href="/ministries/women" className="block px-4 py-2 hover:bg-gray-100">Women</a>
-                <a href="/ministries/health" className="block px-4 py-2 hover:bg-gray-100">Health</a>
-                <a href="/ministries/music" className="block px-4 py-2 hover:bg-gray-100">Music</a>
-              </div>
-            )}
-        </div>
-        </>)
-    case "Media ▼":
-      return(<>
-        <div
-        className="relative"
-        onMouseEnter={() => setopen(item.label)}
-        onMouseLeave={() => setopen(null)}
-        >
-          <Link
-          key={idx}
-          to={item.href} 
-          className="text-lg font-medium text-gray-700 hover:text-blue-900">{item.label}</Link>
-        {isactive && (
-              <div className="absolute top-full bg-white border rounded shadow-md py-2 w-48 z-50">
-                <a href="/media/sermons" className="block px-4 py-2 hover:bg-gray-100">Sermons</a>
-              </div>
-            )}
-        </div>
-        </>)
-    default:
-      return(null)
-  }
-}
-
-function renderDropMobile(open,setopen, item, idx){
-  const dropdownLabels = ["About Us ▼", "Ministries ▼", "Media ▼"];
-  const isExpandible = dropdownLabels.includes(item.label);
-  const isOpen = open === item.label;
-
 }
 
 export default function PageHeader({ navItems = [] }) {
   const [isOpen, setIsOpen] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
+  const [subopen, setsub] = useState(null);
 
   const dropdownContent = {
   "About Us ▼": [
     { label: "Official beliefs", href: "https://www.adventist.org/beliefs/" },
     { label: "Church Manual", href: "https://gc.adventist.org/wp-content/uploads/2025/07/2022-Seventh-day-Adventist-Church-Manual.pdf" },
-    { label: "Church Leaders", href: "/ministries/health" },
+    { label: "Church Leaders ▼", href: "/about/churchleaders", 
+      children: [
+        {label: "Pastor", href: "/about/churchleaders/pastor"},
+        {label: "Elders", href: "/about/churchleaders/elders"},
+      ]
+    },
   ],
   "Ministries ▼": [
     { label: "Education", href: "/ministries/education" },
@@ -100,6 +81,7 @@ export default function PageHeader({ navItems = [] }) {
   ],
   "Media ▼": [
     { label: "Sermons", href: "/media/sermons" },
+    { label: "Events", href: "/media/events" },
   ],
 };
 
@@ -129,7 +111,7 @@ export default function PageHeader({ navItems = [] }) {
               {item.label}
             </Link>
            ) : (
-              renderDropDown(isOpen, setIsOpen, item, idx)
+              renderDropDown(isOpen, setIsOpen, subopen, setsub, item, idx, dropdownContent)
            )
           ))}
         </nav>
