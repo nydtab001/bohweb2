@@ -88,7 +88,7 @@ export default function PageHeader({ navItems = [] }) {
 
   return (
     <>
-    <header className="relative z-[999] max-md:fixed top-0 w-full bg-white border-b border-gray-200 shadow-sm">
+    <header className=" z-[999] fixed top-0 w-full bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-3">
