@@ -21,7 +21,7 @@ function Home(){
           { label: "Media ▼", href: "/media/sermons" },
           { label: "Contact Us", href: "/contact" }
         ]}/>        
-<section className="relative bg-no-repeat max-md:mt-[113px] bg-cover bg-center h-[400px] md:h-[550px] py-16 text-center" style={{backgroundImage: `url(${bohbg})`}}>
+<section className="relative bg-no-repeat mt-[113px] bg-cover bg-center h-[400px] md:h-[550px] py-16 text-center" style={{backgroundImage: `url(${bohbg})`}}>
     <div className="absolute inset-0 bg-black/30"></div>
   <h1 className="text-4xl md:text-7xl md:pt-12 font-bold py-auto text-white relative z-99">Welcome to Beacon of Hope</h1>
   <p className="text-lg md:text-3xl mt-4 text-white relative z-99">The Warmest Church South of the Pyramids</p>

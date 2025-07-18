@@ -22,7 +22,7 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
           >
               {item.label}
           </Link>
-              <div className={`absolute top-full flex flex-col bg-white border shadow-md w-48 z-50 ${
+              <div className={`absolute top-full flex flex-col bg-white border w-48 z-50 ${
           isactive ? 'opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
               {submenu?.map((sub,idx) => (
                 <>
@@ -88,7 +88,7 @@ export default function PageHeader({ navItems = [] }) {
 
   return (
     <>
-    <header className=" z-[999] fixed top-0 w-full bg-white border-b border-gray-200 shadow-sm">
+    <header className=" z-[999] fixed top-0 w-full bg-white border-b border-gray-200 md:shadow-lg shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-3">
@@ -138,7 +138,7 @@ export default function PageHeader({ navItems = [] }) {
       </div>
     </header>
     <div
-  className={`fixed top-[113px] left-0  w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+  className={`fixed top-[113px] left-0 shadow-md py-6 w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
     mobileOpen ? 'translate-x-0' : '-translate-x-full'
   }`}
 >
@@ -151,7 +151,7 @@ export default function PageHeader({ navItems = [] }) {
       <Link
         key={idx}
         to={item.href}
-        className="text-xl py-4 px-2 font-semibold border text-gray-800 hover:text-blue-900"
+        className="text-xl py-4 px-8 text-gray-800 hover:text-blue-900"
         // onClick={() => setMobileOpen(!mobileOpen)}
       >
         {item.label}
