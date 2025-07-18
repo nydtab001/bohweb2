@@ -4,8 +4,11 @@ import Section from "../components/Section";
 import SectionHeading from "../components/SectionHeading";
 import sermons from '../data/sermons.json'
 import { Helmet } from "react-helmet";
+import { useMediaQuery } from "react-responsive";
 
 export default function Sermons2() {
+    const isSmallScreen = useMediaQuery({ maxWidth: 767 });
+    const imageView = isSmallScreen ? "hidden" : "";
     return(
         <>
         <Helmet>
@@ -31,6 +34,9 @@ export default function Sermons2() {
                         <h2 className="text-xl font-semibold text-slate-900">{sermon.title}</h2>
                         <div style={{height:'8px'}}></div>
                         <p className="text-gray-600 text-sm mb-2">{sermon.date}</p>
+                        <div className={`max-h-64 overflow-hidden rounded-md mb-4 ${imageView}`}>
+                            <img src="/bohlogo2.png" alt={sermon.title} className="w-auto h-full object-contain" />
+                        </div>
                         <div style={{height:'3px'}}></div>
                         <audio controls className="w-full">
                         <source src={sermon.audioUrl} type="audio/mpeg" />
@@ -46,10 +52,13 @@ export default function Sermons2() {
             <br></br>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {sermons.slice(4,9).map((sermon, index) => (
-                    <div key={index} className="bg-white shadow-md rounded-lg p-4">
+                    <div key={index} className="bg-white shadow-md rounded-lg p-4 overflow-hidden">
                         <h2 className="text-xl font-semibold text-slate-900">{sermon.title}</h2>
                         <div style={{height:'8px'}}></div>
                         <p className="text-gray-600 text-sm mb-2">{sermon.date}</p>
+                        <div className={`max-h-64 overflow-hidden rounded-md mb-4 ${imageView}`}>
+                            <img src="/bohlogo2.png" alt={sermon.title} className="w-auto h-full object-contain" />
+                        </div>
                         <div style={{height:'3px'}}></div>
                         <audio controls className="w-full">
                         <source src={sermon.audioUrl} type="audio/mpeg" />
