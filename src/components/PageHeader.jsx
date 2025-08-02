@@ -29,11 +29,12 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
                 <div
                 onMouseEnter={() => setsub(sub.label)}
                 onMouseLeave={() => setsub(null)}
+                className="text-gray-700 hover:text-blue-900 relative"
                 >
                 <Link 
                 key={idx}
                 to={sub.href}
-                className="block px-4 py-2 hover:bg-gray-100"
+                className=" block px-4 py-2 hover:bg-gray-100"
                 >
                 {sub.label}
               </Link>
@@ -44,7 +45,7 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
                   <Link 
                 key={idxs}
                 href={subm.href}
-                className="block px-4 py-2 hover:bg-blue-700">
+                className="block px-4 py-2 hover:text-blue-700">
                   {subm.label}
                   </Link>
                 ))}
@@ -75,10 +76,24 @@ export default function PageHeader({ navItems = [] }) {
       ]
     },
   ],
-  "Ministries ▼": [
-    { label: "Education", href: "/ministries/education" },
-    { label: "Community", href: "/ministries/community" },
-  ],
+  // "Ministries ▼": [
+  //   { label: "Community Services", href: "/ministries/community" },
+  //   { label: "Adventurers", href: "/ministries/community" },
+  //   { label: "Communication", href: "/ministries/community" },
+  //   { label: "Community Services", href: "/ministries/community" },
+  //   { label: "Children's Ministries", href: "/ministries/community" },
+  //   { label: "Education", href: "/ministries/education" },
+  //   { label: "Family Life", href: "/ministries/community" },
+  //   { label: "Health Ministries", href: "/ministries/community" },
+  //   { label: "Music", href: "/ministries/community" },
+  //   { label: "Pathfinders", href: "/ministries/community" },
+  //   { label: "Personal Ministries", href: "/ministries/community" },
+  //   { label: "Prayer Ministries", href: "/ministries/community" },
+  //   { label: "Publishing", href: "/ministries/community" },
+  //   { label: "Sabbath School", href: "/ministries/community" },
+  //   { label: "Stewardship", href: "/ministries/community" },
+  //   { label: "Youth Ministries", href: "/ministries/community" },
+  // ],
   "Media ▼": [
     { label: "Sermons", href: "/media/sermons" },
     { label: "Events", href: "/media/events" },
@@ -101,7 +116,7 @@ export default function PageHeader({ navItems = [] }) {
         <nav className="hidden md:flex space-x-6">
           {navItems.map((item, idx) => (
             item.label !== "About Us ▼" && 
-            item.label !== "Ministries ▼" &&
+            item.label !== "Ministries " &&
             item.label !== "Media ▼" ? (
             <Link
               key={idx}
@@ -146,7 +161,6 @@ export default function PageHeader({ navItems = [] }) {
 
     {navItems.map((item, idx) => (
       item.label !== "About Us ▼" && 
-      item.label !== "Ministries ▼" &&
       item.label !== "Media ▼" ? (
       <Link
         key={idx}

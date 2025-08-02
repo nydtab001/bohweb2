@@ -15,7 +15,7 @@ export default function Contact(){
         <PageHeader navItems={[
             { label: "Home", href: "/" },
             { label: "About Us ▼", href: "/about" },
-            { label: "Ministries ▼", href: "/ministries" },
+            { label: "Ministries", href: "/ministries" },
             { label: "Media ▼", href: "/media/sermons" },
             { label: "Contact Us", href: "/contact" }
         ]}/>

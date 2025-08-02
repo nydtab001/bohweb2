@@ -19,7 +19,7 @@ export default function Sermons2() {
         <PageHeader navItems={[
                   { label: "Home", href: "/" },
                   { label: "About Us ▼", href: "/about" },
-                  { label: "Ministries ▼", href: "/ministries" },
+                  { label: "Ministries", href: "/ministries" },
                   { label: "Media ▼", href: "/media/sermons" },
                   { label: "Contact Us", href: "/contact" }
                 ]}
@@ -34,8 +34,8 @@ export default function Sermons2() {
                         <h2 className="text-xl font-semibold text-slate-900">{sermon.title}</h2>
                         <div style={{height:'8px'}}></div>
                         <p className="text-gray-600 text-sm mb-2">{sermon.date}</p>
-                        <div className={`max-h-64 overflow-hidden rounded-md mb-4 ${imageView}`}>
-                            <img src="/bohlogo2.png" alt={sermon.title} className="w-auto h-full object-contain" />
+                        <div className={`flex justify-center overflow-hidden rounded-md mb-4 ${imageView}`}>
+                            <img src="/bohlogo2.png" alt={sermon.title} className="w-auto max-h-64 h-full rounded-md object-contain" />
                         </div>
                         <div style={{height:'3px'}}></div>
                         <audio controls className="w-full">
@@ -56,8 +56,8 @@ export default function Sermons2() {
                         <h2 className="text-xl font-semibold text-slate-900">{sermon.title}</h2>
                         <div style={{height:'8px'}}></div>
                         <p className="text-gray-600 text-sm mb-2">{sermon.date}</p>
-                        <div className={`max-h-64 overflow-hidden rounded-md mb-4 ${imageView}`}>
-                            <img src="/bohlogo2.png" alt={sermon.title} className="w-auto h-full object-contain" />
+                        <div className={`flex justify-center overflow-hidden rounded-md mb-4 ${imageView}`}>
+                            <img src="/bohlogo2.png" alt={sermon.title} className="w-auto h-full max-h-64 rounded-md object-contain" />
                         </div>
                         <div style={{height:'3px'}}></div>
                         <audio controls className="w-full">
