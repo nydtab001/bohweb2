@@ -8,6 +8,7 @@ import Ministries from './pages/ministries.jsx';
 import Events from './pages/events.jsx';
 import Sermons from './pages/sermons.jsx';
 import Contact from './pages/contact.jsx';
+import Adventurers from './pages/adventurers.jsx';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Route path="/media/sermons" element={<Sermons/>}/>
       <Route path="/media/events" element={<Events/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/adventurers" element={<Adventurers/>}/>
+      {/* Add more routes as needed */}
     </Routes>
     </Router>
   )
