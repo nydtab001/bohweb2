@@ -3,7 +3,7 @@ export default function MinistryLayout({ image, director, children }) {
     return (
         <>
             <div
-            className="flex flex-col md:flex-row items-center justify-between mb-8 border-b-2 border-gray-300 pb-10">
+            className="flex flex-col gap-8 md:flex-row items-center justify-between mb-8 border-b-2 border-gray-300 pb-10">
                 <img src={image} alt="Ministry Logo" className="h-auto max-w-[280px] object-cover" />
                 <div className="flex items-top gap-2">
                     {/* <img src={director.photo || "/default-avatar.png"} alt={director.name} className="w-16 h-16 rounded-full" /> */}
