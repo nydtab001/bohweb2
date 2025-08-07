@@ -34,7 +34,7 @@ function Ministries() {
         <div className="flex flex-col gap-12 md:grid md:grid-cols-4 md:gap-14 px-4 py-8">
           {logos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center transition-all hover:scale-110">
-              <a href={logo.href || `#`}><img src={logo.src} alt={logo.alt} className="h-auto max-w-[190px] w-full object-cover mb-4 md:mb-0" /></a>
+              <a href={logo.href || `#`}><img src={logo.src} alt={logo.alt} title={logo.title} className="h-auto max-w-[190px] w-full object-cover mb-4 md:mb-0" /></a>
             </div>
           ))}
         </div>

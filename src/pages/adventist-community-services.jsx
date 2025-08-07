@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import MinistryLayout from "../components/MinistryLayout";
 import logos from '../data/logos.json';
 
-function Adventurers() {
+function CommunityServices() {
   return (
     <>
     <Helmet>
@@ -23,9 +23,9 @@ function Adventurers() {
               { label: "Contact Us", href: "/contact" }
             ]}
     />
-    <SectionHeading title="Adventurer Club" bg="bg-rose-950"/>
+    <SectionHeading title="Adventist Community Services" bg="bg-rose-950" colour="text-amber-400"/>
     <Section>
-      <MinistryLayout image={logos[0].src} director={{ name: "John Doe", photo: "/images/john_doe.jpg" }}>
+      <MinistryLayout image={logos[3].src} director={{ name: "John Doe", photo: "/images/john_doe.jpg" }}>
         <div>
           <p className="text-lg mb-6">The Adventurer Club is a family-centered program that provides fun and challenging activities for children ages 4 to 9. It aims to strengthen their spiritual growth, develop their skills, and foster a sense of community.</p>
           <p className="text-lg mb-6">Join us for exciting adventures, learning experiences, and spiritual growth!</p>
@@ -37,4 +37,4 @@ function Adventurers() {
   );
 }
 
-export default Adventurers;
+export default CommunityServices;

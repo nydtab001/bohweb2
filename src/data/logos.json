@@ -2,66 +2,97 @@
   {
     "src": "/logos/adventurer-logo.png",
     "alt": "Adventurer Club logo - SDA youth",
-    "href": "/ministries/adventurers"
+    "href": "/ministries/adventurers",
+    "title": "Adventurer Club"
   },
   {
     "src": "/logos/pathfinder-logo.png",
-    "alt": "Pathfinder Club official logo - Beacon of Hope Zimbabwe"
+    "alt": "Pathfinder Club official logo - Beacon of Hope Zimbabwe",
+    "href": "/ministries/pathfinders",
+    "title": "Pathfinder Club"
   },
   {
     "src": "/logos/womens-ministries-logo.png",
-    "alt": "Women's Ministries SDA logo - Beacon of hope Bulawayo"
+    "alt": "Women's Ministries SDA logo - Beacon of hope Bulawayo",
+    "href": "/ministries/womens-ministries",
+    "title": "Women's Ministries"
   },
   {
     "src": "/logos/adventist-community-services-logo.png",
-    "alt": "Adventist Community Services logo - Adventist Men and Dorcas"
+    "alt": "Adventist Community Services logo - Adventist Men and Dorcas",
+    "href": "/ministries/adventist-community-services",
+    "title": "Adventist Community Services"
   },
   {
     "src": "/logos/personal-ministries-logo.png",
-    "alt": "Personal Ministries logo - Evangelism and Outreach"
+    "alt": "Personal Ministries logo - Evangelism and Outreach",
+    "href": "/ministries/personal-ministries",
+    "title": "Personal Ministries"
   },
   {
     "src": "/logos/adventist-youth-logo.png",
-    "alt": "Adventist Youth Ministries official SDA logo"
+    "alt": "Adventist Youth Ministries official SDA logo",
+    "href": "/ministries/adventist-youth-ministries",
+    "title": "Adventist Youth Ministries"
   },
   {
     "src": "/logos/sabbath-school-logo.png",
-    "alt": "Sabbath School department logo - Beacon of Hope SDA"
+    "alt": "Sabbath School department logo - Beacon of Hope SDA",
+    "href": "/ministries/sabbath-school",
+    "title": "Sabbath School"
   },
   {
     "src": "/logos/health-ministries-logo.png",
-    "alt": "Health Ministries logo - Beacon of Hope Church"
+    "alt": "Health Ministries logo - Beacon of Hope Church",
+    "href": "/ministries/health-ministries",
+    "title": "Health Ministries"
   },
   {
     "src": "/logos/childrens-ministries-logo.png",
-    "alt": "Children's Ministries logo - Beacon of Hope SDA Church"
+    "alt": "Children's Ministries logo - Beacon of Hope SDA Church",
+    "href": "/ministries/childrens-ministries",
+    "title": "Children's Ministries"
   },
   {
     "src": "/logos/stewardship-logo.png",
-    "alt": "Stewardship SDA logo - Beacon of Hope Seventh-day Adventist Church"
+    "alt": "Stewardship SDA logo - Beacon of Hope Seventh-day Adventist Church",
+    "href": "/ministries/stewardship",
+    "title": "Stewardship"
   },
   {
     "src": "/logos/family-ministries-logo.png",
-    "alt": "Family Ministries SDA logo - Beacon of Hope Seventh-Day Adventist Church Bulawayo"
+    "alt": "Family Ministries SDA logo - Beacon of Hope Seventh-Day Adventist Church Bulawayo",
+    "href": "/ministries/family-ministries",
+    "title": "Family Ministries"
   },
   {
     "src": "/logos/prayer-ministries-logo.png",
-    "alt": "Prayer Ministries logo - BOH"
+    "alt": "Prayer Ministries logo - BOH",
+    "href": "/ministries/prayer-ministries",
+    "title": "Prayer Ministries"
   },
   {
     "src": "/logos/boh-communications-logo.png",
-    "alt": "Beacon of Hope Communications Department logo"
+    "alt": "Beacon of Hope Communications Department logo",
+    "href": "/ministries/communications",
+    "title": "Communications Department"
   },
   {
     "src": "/logos/master-guide-logo.png",
-    "alt": "Beacon of Hope Church Master Guide logo"
+    "alt": "Beacon of Hope Church Master Guide logo",
+    "href": "/ministries/master-guide",
+    "title": "Master Guide"
   },
   {
     "src": "/logos/music-department-logo.png",
-    "alt": "Beacon of Hope Church Music Department logo"
+    "alt": "Beacon of Hope Church Music Department logo",
+    "href": "/ministries/music-department",
+    "title": "Music Department"
   },
   {
     "src": "/logos/education-department-logo.png",
-    "alt": "Beacon of Hope Bulawayo Education Department logo"
+    "alt": "Beacon of Hope Bulawayo Education Department logo",
+    "href": "/ministries/education-department",
+    "title": "Education Department"
   }
 ]
