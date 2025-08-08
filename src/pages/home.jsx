@@ -3,9 +3,12 @@ import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import bohbg from "/bohbg.jpg";
 import UnderConstruction from "../components/under_construction";
+import Section from "../components/Section";
+import { useNavigate } from "react-router-dom";
 
 
 function Home(){
+    const navigate = useNavigate();
     return(
         <>
         <Helmet>
@@ -26,12 +29,20 @@ function Home(){
   <h1 className="text-4xl md:text-7xl md:pt-12 font-bold py-auto text-white relative z-99">Welcome to Beacon of Hope</h1>
   <p className="text-lg md:text-3xl mt-4 text-white relative z-99">The Warmest Church South of the Pyramids</p>
   <div className="mt-6">
-    <button className="bg-blue-700 text-white relative z-999 px-6 py-3 rounded-full shadow hover:bg-blue-800 transition">
-      Watch Sermons
+    <button className=" text-white relative z-999 px-6 py-3 border-white rounded-full shadow transition-colors hover:ease-in ease-out duration-100 hover:bg-blue-800/80"
+    onClick={() => navigate("/media/sermons")}>
+      Listen to Sermons
     </button>
   </div>
 </section>
-<UnderConstruction/>
+<Section className="bg-gray-100">
+  <section className=" px-6 text-center">
+  <h2 className="text-3xl font-semibold mb-4">A Message from Our Pastor</h2>
+  <p className="max-w-2xl mx-auto text-lg text-gray-700">
+    “At Beacon of Hope, we believe in nurturing faith, fostering community, and living out the love of Christ. Whether you're a lifelong believer or just curious, you're welcome here.”
+  </p>
+</section>
+</Section>
 <Footer/>
 </>
     );

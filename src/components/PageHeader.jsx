@@ -22,18 +22,21 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
           >
               {item.label}
           </Link>
-              <div className={`absolute top-full flex flex-col bg-white border w-48 z-50 ${
+              <div className={`absolute top-full flex flex-col z-50 ${
           isactive ? 'opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
+            <div className="h-[43px] w-full">
+              </div>
               {submenu?.map((sub,idx) => (
                 <>
                 <div
                 onMouseEnter={() => setsub(sub.label)}
                 onMouseLeave={() => setsub(null)}
-                className="text-gray-700 hover:text-blue-900 relative"
+                className="text-gray-700 hover:text-blue-900 relative bg-white border w-48"
                 >
                 <Link 
                 key={idx}
                 to={sub.href}
+                target={sub.target}
                 className=" block px-4 py-2 hover:bg-gray-100"
                 >
                 {sub.label}
@@ -67,8 +70,8 @@ export default function PageHeader({ navItems = [] }) {
 
   const dropdownContent = {
   "About Us ▼": [
-    { label: "Official beliefs", href: "https://www.adventist.org/beliefs/" },
-    { label: "Church Manual", href: "https://gc.adventist.org/wp-content/uploads/2025/07/2022-Seventh-day-Adventist-Church-Manual.pdf" },
+    { label: "Official beliefs", href: "https://www.adventist.org/beliefs/", target: "_blank" },
+    { label: "Church Manual", href: "https://gc.adventist.org/wp-content/uploads/2025/07/2022-Seventh-day-Adventist-Church-Manual.pdf", target: "_blank" },
     { label: "Church Leaders ▼", href: "/about/churchleaders", 
       children: [
         {label: "Pastor", href: "/about/churchleaders/pastor"},
