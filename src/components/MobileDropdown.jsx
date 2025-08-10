@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import DropdownButton from "./assets/dropdownButton";
+import DropdownButton from "./assets/DropdownButton";
 
 export default function MobileDropdown({ item, activeLabel, setActiveLabel, dropdownContent }) {
   const isOpen = activeLabel === item.label;
