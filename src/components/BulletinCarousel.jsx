@@ -2,8 +2,13 @@ import { useState } from 'react';
 // import DropdownButton from './assets/dropdownButton';
 import NextButton from './assets/NextButton';
 import PrevButton from './assets/PrevButton';
+import { useMediaQuery } from "react-responsive";
 
 export default function MultiPageBulletinCarousel({bulletins}) {
+  const isMobileScreen = useMediaQuery({ maxWidth: 601 });
+
+  const prevButtonText = isMobileScreen ? "Prev" : "Previous Bulletin";
+  const nextButtonText = isMobileScreen ? "Next" : "Next Bulletin";
 //   const bulletins = [/* your structured data here */];
   const [bulletinIndex, setBulletinIndex] = useState(0);
   const [pageIndex, setPageIndex] = useState(0);
@@ -72,13 +77,13 @@ export default function MultiPageBulletinCarousel({bulletins}) {
           onClick={prevBulletin}
           className="text-white px-4 py-2 border-none rounded-full bg-blue-700 hover:bg-blue-900"
         >
-          ‹ Previous Bulletin
+          ‹ {prevButtonText}
         </button>
         <button
           onClick={nextBulletin}
           className="text-white px-4 py-2 border-none rounded-full bg-blue-700 hover:bg-blue-900"
         >
-          Next Bulletin ›
+          {nextButtonText} ›
         </button>
       </div>
     </section>
