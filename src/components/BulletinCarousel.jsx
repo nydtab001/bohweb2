@@ -27,7 +27,7 @@ export default function MultiPageBulletinCarousel({bulletins}) {
   };
 
   return (
-    <section className="py-12 px-6 bg-white text-center">
+    <section className="md:py-12 md:px-6 bg-white text-center">
       <h2 className="text-3xl font-semibold mb-4">🗓️ Sabbath Bulletins</h2>
       <p className="text-lg text-gray-600 mb-6">{currentBulletin.date} – Page {pageIndex + 1}</p>
 

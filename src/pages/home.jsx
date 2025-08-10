@@ -44,9 +44,9 @@ function Home(){
   </p>
 </section>
 </Section>
-<Section>
+<section className="md:px-16 max-w-7xl mx-auto px-8 py-12 pt-12">
   <MultiPageBulletinCarousel bulletins={bulletinData} />
-</Section>
+</section>
 <Footer/>
 </>
     );
