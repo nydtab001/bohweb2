@@ -6,8 +6,7 @@ import UnderConstruction from "../components/under_construction";
 import Section from "../components/Section";
 import { useNavigate } from "react-router-dom";
 import bulletinData from "../data/bulletins.json";
-import MultiPageBulletinCarousel from "../components/bulletinCarousel";
-
+import MultiPageBulletinCarousel from "../components/BulletinCarousel";
 
 function Home(){
     const navigate = useNavigate();
