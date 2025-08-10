@@ -1,0 +1,86 @@
+import { useState } from 'react';
+import DropdownButton from './assets/dropdownButton';
+import NextButton from './assets/NextButton';
+import PrevButton from './assets/PrevButton';
+
+export default function MultiPageBulletinCarousel({bulletins}) {
+//   const bulletins = [/* your structured data here */];
+  const [bulletinIndex, setBulletinIndex] = useState(0);
+  const [pageIndex, setPageIndex] = useState(0);
+
+  const currentBulletin = bulletins[bulletinIndex];
+  const currentPage = currentBulletin.pages[pageIndex];
+  const currentPages = currentBulletin.pages;
+
+  const nextPage = () =>
+    setPageIndex((pageIndex + 1) % currentBulletin.pages.length);
+  const prevPage = () =>
+    setPageIndex((pageIndex - 1 + currentBulletin.pages.length) % currentBulletin.pages.length);
+
+  const nextBulletin = () => {
+    setBulletinIndex((bulletinIndex + 1) % bulletins.length);
+    setPageIndex(0);
+  };
+  const prevBulletin = () => {
+    setBulletinIndex((bulletinIndex - 1 + bulletins.length) % bulletins.length);
+    setPageIndex(0);
+  };
+
+  return (
+    <section className="py-12 px-6 bg-white text-center">
+      <h2 className="text-3xl font-semibold mb-4">🗓️ Sabbath Bulletins</h2>
+      <p className="text-lg text-gray-600 mb-6">{currentBulletin.date} – Page {pageIndex + 1}</p>
+
+      <div className="relative w-full aspect-[210/297] mx-auto">
+        {/* <img
+          src={currentPage}
+          alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
+          className="w-full h-auto object-contain rounded-lg shadow-md"
+        /> */}
+        <div className="overflow-hidden w-full h-auto rounded-lg shadow-md">
+            <div className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${pageIndex * 100}%)` }}>
+                {currentPages.map((page, idx) => (
+                    <img
+                        key={idx}
+                        src={page}
+                        alt={`Bulletin ${currentBulletin.date} Page ${idx + 1}`}
+                        className="w-full flex-shrink-0 object-contain"
+                    />
+                ))}
+            </div>
+        </div>
+
+        {/* Page navigation */}
+        <button
+          onClick={prevPage}
+          className="absolute top-1/2 -translate-y-1/2 bg-blue-950/50 text-white ml-0 py-2 border-none rounded-l w-8 h-10 md:w-12 md:h-14 left-0 hover:bg-gray-700"
+        >
+          <PrevButton height='5em' width='5em'/>
+        </button>
+        <button
+          onClick={nextPage}
+          className="absolute top-1/2 -translate-y-1/2 bg-blue-950/50 text-white mr-0 py-2 border-none rounded-r w-8 h-10 md:w-12 md:h-14 right-0 hover:bg-gray-700"
+        >
+          <NextButton height='5em' width='5em'/>
+        </button>
+      </div>
+
+      {/* Bulletin navigation */}
+      <div className="mt-6 flex justify-center gap-4">
+        <button
+          onClick={prevBulletin}
+          className="text-white px-4 py-2 border-none rounded-full bg-blue-700 hover:bg-blue-900"
+        >
+          ‹ Previous Bulletin
+        </button>
+        <button
+          onClick={nextBulletin}
+          className="text-white px-4 py-2 border-none rounded-full bg-blue-700 hover:bg-blue-900"
+        >
+          Next Bulletin ›
+        </button>
+      </div>
+    </section>
+  );
+}

@@ -5,6 +5,8 @@ import bohbg from "/bohbg.jpg";
 import UnderConstruction from "../components/under_construction";
 import Section from "../components/Section";
 import { useNavigate } from "react-router-dom";
+import bulletinData from "../data/bulletins.json";
+import MultiPageBulletinCarousel from "../components/bulletinCarousel";
 
 
 function Home(){
@@ -42,6 +44,9 @@ function Home(){
     “At Beacon of Hope, we believe in nurturing faith, fostering community, and living out the love of Christ. Whether you're a lifelong believer or just curious, you're welcome here.”
   </p>
 </section>
+</Section>
+<Section>
+  <MultiPageBulletinCarousel bulletins={bulletinData} />
 </Section>
 <Footer/>
 </>

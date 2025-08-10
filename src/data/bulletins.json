@@ -1,0 +1,35 @@
+[
+  {
+    "date": "12-07-2025",
+    "title": "Sabbath Bulletin – July 12, 2025",
+    "pages": [
+      "bulletins/5_jul_2025_1.jpg",
+      "bulletins/5_jul_2025_2.jpg",
+        "bulletins/5_jul_2025_3.jpg",
+        "bulletins/5_jul_2025_4.jpg",
+        "bulletins/5_jul_2025_5.jpg"
+    ]
+  },
+  {
+    "date": "05-07-2025",
+    "title": "Sabbath Bulletin – July 5, 2025",
+    "pages": [
+      "bulletins/12_jul_2025_1.jpg",
+      "bulletins/12_jul_2025_2.jpg",
+        "bulletins/12_jul_2025_3.jpg",
+        "bulletins/12_jul_2025_4.jpg",
+        "bulletins/12_jul_2025_5.jpg"
+    ]
+  },
+  {
+    "date": "21-06-2025",
+    "title": "Sabbath Bulletin – June 21, 2025",
+    "pages": [
+      "bulletins/21_jun_2025_1.jpg",
+      "bulletins/21_jun_2025_2.jpg",
+        "bulletins/21_jun_2025_3.jpg",
+        "bulletins/21_jun_2025_4.jpg",
+        "bulletins/21_jun_2025_5.jpg"
+    ]
+  }
+]
