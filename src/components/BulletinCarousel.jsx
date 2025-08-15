@@ -3,9 +3,11 @@ import { useState } from 'react';
 import NextButton from './assets/NextButton';
 import PrevButton from './assets/PrevButton';
 import { useMediaQuery } from "react-responsive";
+import { useEffect } from 'react';
 
 export default function MultiPageBulletinCarousel({bulletins}) {
   const isMobileScreen = useMediaQuery({ maxWidth: 601 });
+  const [visible, setVisible] = useState(true);
 
   const prevButtonText = isMobileScreen ? "Prev" : "Previous Bulletin";
   const nextButtonText = isMobileScreen ? "Next" : "Next Bulletin";
@@ -16,6 +18,12 @@ export default function MultiPageBulletinCarousel({bulletins}) {
   const currentBulletin = bulletins[bulletinIndex];
   const currentPage = currentBulletin.pages[pageIndex];
   const currentPages = currentBulletin.pages;
+
+    useEffect(() => {
+  setVisible(false); // fade out
+  const timeout = setTimeout(() => setVisible(true), 100); // fade in after 100ms
+  return () => clearTimeout(timeout);
+}, [pageIndex, bulletinIndex]);
 
   const nextPage = () =>
     setPageIndex((pageIndex + 1) % currentBulletin.pages.length);
@@ -43,17 +51,16 @@ export default function MultiPageBulletinCarousel({bulletins}) {
           className="w-full h-auto object-contain rounded-lg shadow-md"
         /> */}
         <div className="overflow-hidden w-full h-auto rounded-lg shadow-md">
-            <div className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${pageIndex * 100}%)` }}>
-                {currentPages.map((page, idx) => (
-                    <img
-                        key={idx}
-                        src={page}
-                        alt={`Bulletin ${currentBulletin.date} Page ${idx + 1}`}
-                        className="w-full flex-shrink-0 object-contain"
-                    />
-                ))}
-            </div>
+            <div className="w-full h-full flex items-center justify-center">
+  <img
+    key={`${bulletinIndex}-${pageIndex}`}
+    src={currentPage}
+    alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
+    className={`w-full object-contain rounded-lg shadow-md transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
+    loading="lazy"
+  />
+</div>
+
         </div>
 
         {/* Page navigation */}
