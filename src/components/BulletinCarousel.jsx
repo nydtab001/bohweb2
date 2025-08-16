@@ -4,6 +4,7 @@ import NextButton from './assets/NextButton';
 import PrevButton from './assets/PrevButton';
 import { useMediaQuery } from "react-responsive";
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function MultiPageBulletinCarousel({bulletins}) {
   const isMobileScreen = useMediaQuery({ maxWidth: 601 });
