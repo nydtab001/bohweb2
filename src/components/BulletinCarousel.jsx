@@ -86,13 +86,13 @@ export default function MultiPageBulletinCarousel({bulletins}) {
       <div className="mt-6 flex justify-center gap-4">
         <button
           onClick={prevBulletin}
-          className="text-blue-900 px-4 py-2 border-blue-900 border-2 rounded-full hover:bg-blue-900"
+          className="text-blue-900 px-4 py-2 max-sm:text-sm max-sm:py-2 border-blue-900 border-2 rounded-full hover:bg-blue-900"
         >
           ‹ {prevButtonText}
         </button>
         <button
           onClick={nextBulletin}
-          className="text-blue-900 px-4 py-2  border-blue-900 border-2 rounded-full hover:bg-blue-900"
+          className="text-blue-900 px-4 py-2 max-sm:text-sm max-sm:py-2 border-blue-900 border-2 rounded-full hover:bg-blue-900"
         >
           {nextButtonText} ›
         </button>

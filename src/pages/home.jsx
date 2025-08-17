@@ -67,7 +67,7 @@ function Home(){
   <MultiPageBulletinCarousel bulletins={bulletinData} />
 </section>
 <section className="pt-8 bg-white text-center">
-  <h2 className="md:text-5xl text-3xl font-semibold mb-12">Last Sabbath Livestream</h2>
+  <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 text-3xl font-semibold mb-12">Last Sabbath Livestream</h2>
   <div className="relative w-full max-w-4xl mx-auto aspect-video">
     <iframe
       src="https://www.youtube.com/embed/U90UV9RpsDY?si=GDJXX_-QTOdqpp98"
