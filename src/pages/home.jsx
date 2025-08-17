@@ -55,16 +55,30 @@ function Home(){
   </div>
 </section>
 
-<Section className="bg-gray-100">
-  <section className=" px-6 text-center">
-  <h2 className="text-3xl font-semibold mb-4">A Message from Our Pastor</h2>
-  <p className="max-w-2xl mx-auto text-lg text-gray-700">
+<section className="bg-gray-100">
+<Section className=" text-center">
+  <h2 className="md:text-5xl text-3xl font-semibold mb-8">A Message from Our Pastor</h2>
+  <p className="max-w-3xl mx-auto md:text-2xl text-lg text-gray-700">
     “At Beacon of Hope, we believe in nurturing faith, fostering community, and living out the love of Christ. Whether you're a lifelong believer or just curious, you're welcome here.”
   </p>
-</section>
 </Section>
-<section className="md:px-16 max-w-7xl mx-auto px-8 py-12 pt-12">
+</section>
+<section className="md:px-16 max-w-6xl mx-auto px-8 pt-10">
   <MultiPageBulletinCarousel bulletins={bulletinData} />
+</section>
+<section className="pt-8 bg-white text-center">
+  <h2 className="md:text-5xl text-3xl font-semibold mb-12">Last Sabbath Livestream</h2>
+  <div className="relative w-full max-w-4xl mx-auto aspect-video">
+    <iframe
+      src="https://www.youtube.com/embed/U90UV9RpsDY?si=GDJXX_-QTOdqpp98"
+      title="Last Sabbath Livestream"
+      className="absolute inset-0 w-full h-full"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      loading="lazy"
+    />
+  </div>
 </section>
 <Footer/>
 </>

@@ -45,8 +45,8 @@ export default function MultiPageBulletinCarousel({bulletins}) {
       <Helmet>
   <link rel="preload" as="image" href={bulletins[0].pages[0]} />
 </Helmet>
-      <h2 className="text-3xl font-semibold mb-4">Sabbath Bulletins</h2>
-      <p className="text-lg text-gray-600 mb-6">{currentBulletin.date} – Page {pageIndex + 1}</p>
+      <h2 className="md:text-5xl text-3xl font-semibold mb-2">Sabbath Bulletins</h2>
+      <p className="text-lg text-gray-600 mb-12">{currentBulletin.date} – Page {pageIndex + 1}</p>
 
       <div className="relative w-full aspect-[210/297] mx-auto">
         {/* <img
@@ -86,13 +86,13 @@ export default function MultiPageBulletinCarousel({bulletins}) {
       <div className="mt-6 flex justify-center gap-4">
         <button
           onClick={prevBulletin}
-          className="text-white px-4 py-2 border-none rounded-full bg-blue-700 hover:bg-blue-900"
+          className="text-blue-900 px-4 py-2 border-blue-900 border-2 rounded-full hover:bg-blue-900"
         >
           ‹ {prevButtonText}
         </button>
         <button
           onClick={nextBulletin}
-          className="text-white px-4 py-2 border-none rounded-full bg-blue-700 hover:bg-blue-900"
+          className="text-blue-900 px-4 py-2  border-blue-900 border-2 rounded-full hover:bg-blue-900"
         >
           {nextButtonText} ›
         </button>
