@@ -25,17 +25,36 @@ function Home(){
           { label: "Media ▼", href: "/media/sermons" },
           { label: "Contact Us", href: "/contact" }
         ]}/>        
-<section className="relative bg-no-repeat mt-[113px] bg-cover bg-center h-[400px] md:h-[550px] py-16 text-center" style={{backgroundImage: `url(${bohbg})`}}>
-    <div className="absolute inset-0 bg-black/30"></div>
-  <h1 className="text-4xl md:text-7xl md:pt-12 font-bold py-auto text-white relative z-99">Welcome to Beacon of Hope</h1>
-  <p className="text-lg md:text-3xl mt-4 text-white relative z-99">The Warmest Church South of the Pyramids</p>
-  <div className="mt-6">
-    <button className=" text-white relative z-999 px-6 py-3 border-white rounded-full shadow transition-colors hover:ease-in ease-out duration-100 hover:bg-blue-800/80"
-    onClick={() => navigate("/media/sermons")}>
+<section className="relative mt-[113px] h-[400px] md:h-[550px] py-16 text-center overflow-hidden bg-black">
+  {/* Background image */}
+  <img
+    src={bohbg}
+    alt="Beacon of Hope background"
+    className="absolute inset-0 w-full h-full object-cover z-[0]"
+    loading="eager"
+    decoding="async"
+  />
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/30 z-[1]" />
+
+  {/* Content */}
+  <h1 className="text-4xl md:text-7xl md:pt-12 font-bold text-white relative z-10">
+    Welcome to Beacon of Hope
+  </h1>
+  <p className="text-lg md:text-3xl mt-4 text-white relative z-10">
+    The Warmest Church South of the Pyramids
+  </p>
+  <div className="mt-6 relative z-10">
+    <button
+      className="text-white px-6 py-3 border border-white rounded-full shadow transition-colors duration-100 ease-out hover:bg-blue-800/80"
+      onClick={() => navigate("/media/sermons")}
+    >
       Listen to Sermons
     </button>
   </div>
 </section>
+
 <Section className="bg-gray-100">
   <section className=" px-6 text-center">
   <h2 className="text-3xl font-semibold mb-4">A Message from Our Pastor</h2>
