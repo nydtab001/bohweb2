@@ -45,8 +45,8 @@ export default function MultiPageBulletinCarousel({bulletins}) {
       <Helmet>
   <link rel="preload" as="image" href={bulletins[0].pages[0]} />
 </Helmet>
-      <h2 className="md:text-5xl text-3xl font-semibold mb-2">Sabbath Bulletins</h2>
-      <p className="text-lg text-gray-600 mb-12">{currentBulletin.date} – Page {pageIndex + 1}</p>
+      <h2 className="md:text-5xl text-2xl font-semibold mb-2">Sabbath Bulletins</h2>
+      <p className="md:text-lg text-base text-gray-600 md:mb-12 mb-6">{currentBulletin.date} – Page {pageIndex + 1}</p>
 
       <div className="relative w-full aspect-[210/297] mx-auto">
         {/* <img

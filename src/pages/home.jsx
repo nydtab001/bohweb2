@@ -25,7 +25,7 @@ function Home(){
           { label: "Media ▼", href: "/media/sermons" },
           { label: "Contact Us", href: "/contact" }
         ]}/>        
-<section className="relative mt-[113px] h-[400px] md:h-[550px] py-16 text-center overflow-hidden bg-black">
+<section className="relative md:mt-[113px] mt-[96px] h-[400px] md:h-[550px] py-16 text-center overflow-hidden bg-black">
   {/* Background image */}
   <img
     src={bohbg}
@@ -39,15 +39,15 @@ function Home(){
   <div className="absolute inset-0 bg-black/30 z-[1]" />
 
   {/* Content */}
-  <h1 className="text-4xl md:text-7xl md:pt-12 font-bold text-white relative z-10">
+  <h1 className="text-4xl md:text-7xl px-8 md:pt-12 font-bold text-white relative z-10">
     Welcome to Beacon of Hope
   </h1>
-  <p className="text-lg md:text-3xl mt-4 text-white relative z-10">
+  <p className="text-lg md:text-3xl px-8 mt-4 text-white relative z-10">
     The Warmest Church South of the Pyramids
   </p>
   <div className="mt-6 relative z-10">
     <button
-      className="text-white px-6 py-3 border border-white rounded-full shadow transition-colors duration-100 ease-out hover:bg-blue-800/80"
+      className="text-white max-sm:text-sm px-6 py-3 border border-white rounded-full shadow transition-colors duration-100 ease-out hover:bg-blue-800/80"
       onClick={() => navigate("/media/sermons")}
     >
       Listen to Sermons
@@ -57,13 +57,13 @@ function Home(){
 
 <section className="bg-gray-100">
 <Section className=" text-center">
-  <h2 className="md:text-5xl text-3xl font-semibold mb-8">A Message from Our Pastor</h2>
-  <p className="max-w-3xl mx-auto md:text-2xl text-lg text-gray-700">
+  <h2 className="md:text-5xl text-2xl font-semibold mb-8">A Message from Our Pastor</h2>
+  <p className="max-w-full mx-auto md:text-2xl text-lg text-gray-700">
     “At Beacon of Hope, we believe in nurturing faith, fostering community, and living out the love of Christ. Whether you're a lifelong believer or just curious, you're welcome here.”
   </p>
 </Section>
 </section>
-<section className="md:px-16 max-w-6xl mx-auto px-8 pt-10">
+<section className="md:px-16 max-w-6xl mx-auto px-8 md:pt-10 pt-8">
   <MultiPageBulletinCarousel bulletins={bulletinData} />
 </section>
 <section className="pt-8 bg-white text-center">

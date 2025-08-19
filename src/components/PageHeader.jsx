@@ -110,7 +110,7 @@ export default function PageHeader({ navItems = [] }) {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-3">
-          <img src={logo} alt="Church Logo" className="h-20 w-auto" />
+          <img src={logo} alt="Church Logo" className="max-sm:h-16 h-20 w-auto" />
           <div className="text-left">
           </div>
         </Link>
@@ -156,7 +156,7 @@ export default function PageHeader({ navItems = [] }) {
       </div>
     </header>
     <div
-  className={`fixed top-[113px] left-0 shadow-md py-6 w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+  className={`fixed top-[96px] left-0 shadow-md py-6 w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
     mobileOpen ? 'translate-x-0' : '-translate-x-full'
   }`}
 >
