@@ -54,13 +54,13 @@ export default function MultiPageBulletinCarousel({bulletins}) {
           alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
           className="w-full h-auto object-contain rounded-lg shadow-md"
         /> */}
-        <div className="overflow-hidden w-full h-auto rounded-lg shadow-md">
+        <div className="overflow-hidden w-full h-auto shadow-md">
             <div className="w-full h-full flex items-center justify-center">
   <img
     key={`${bulletinIndex}-${pageIndex}`}
     src={currentPage}
     alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
-    className={`w-full object-contain rounded-lg shadow-md transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
+    className={`w-full object-contain shadow-md transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
     loading="lazy"
   />
 </div>
