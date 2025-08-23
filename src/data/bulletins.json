@@ -1,5 +1,16 @@
 [
   {
+    "date": "23-08-2025",
+    "title": "Sabbath Bulletin – August 23, 2025",
+    "pages": [
+      "bulletins/23_aug_2025_1.webp",
+      "bulletins/23_aug_2025_2.webp",
+      "bulletins/23_aug_2025_3.webp",
+      "bulletins/23_aug_2025_4.webp",
+      "bulletins/23_aug_2025_5.webp"
+    ]
+  },
+  {
     "date": "16-08-2025",
     "title": "Sabbath Bulletin – August 16, 2025",
     "pages": [
@@ -18,17 +29,6 @@
         "bulletins/5_jul_2025_3.jpg",
         "bulletins/5_jul_2025_4.jpg",
         "bulletins/5_jul_2025_5.jpg"
-    ]
-  },
-  {
-    "date": "05-07-2025",
-    "title": "Sabbath Bulletin – July 5, 2025",
-    "pages": [
-      "bulletins/12_jul_2025_1.jpg",
-      "bulletins/12_jul_2025_2.jpg",
-        "bulletins/12_jul_2025_3.jpg",
-        "bulletins/12_jul_2025_4.jpg",
-        "bulletins/12_jul_2025_5.jpg"
     ]
   }
 ]
