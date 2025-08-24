@@ -14,7 +14,7 @@ export default function MinistryLayout({ image, director, children }) {
                 </div>
             </div>
             <div>
-                <h1 className="text-2xl font-bold mb-6">Mission Statement</h1>
+                <h1 className="text-2xl font-bold mb-6">About the Ministry</h1>
                 {children}
             </div>
         </>
