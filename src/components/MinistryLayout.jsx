@@ -8,7 +8,7 @@ export default function MinistryLayout({ image, director, children }) {
                 <div className="flex items-top gap-2">
                     {/* <img src={director.photo || "/default-avatar.png"} alt={director.name} className="w-16 h-16 rounded-full" /> */}
                     <div>
-                        <p className="font-semibold max-sm:text-3xl  text-5xl">Director</p>
+                        <p className="font-semibold max-sm:text-3xl mb-1 text-5xl">Director</p>
                         <p className="text-2xl text-gray-500">{director.name}</p>
                     </div>
                 </div>
