@@ -66,11 +66,11 @@ function Home(){
 <section className="md:px-16 max-w-6xl mx-auto px-8 md:pt-10 pt-8">
   <MultiPageBulletinCarousel bulletins={bulletinData} />
 </section>
-<section className="pt-8 bg-white text-center">
+<section className="pt-8 bg-white text-center px-8">
   <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 text-3xl font-semibold mb-12">Sabbath Livestream</h2>
-  <div className="relative w-full max-w-4xl mx-auto aspect-video">
+  <div className="relative w-full max-w-4xl mx-auto aspect-video ">
     <iframe
-      src="https://www.youtube.com/embed/WHSvyuoLsxs?si=L1Yy1lRQ8yNuqET4"
+      src="https://www.youtube.com/embed/hYsz134PNWQ?si=ka_LiZX3lMJZTSB3"
       title="Sabbath Livestream"
       className="absolute inset-0 w-full h-full"
       frameBorder="0"

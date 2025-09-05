@@ -25,7 +25,7 @@ function Adventurers() {
     />
     <SectionHeading title="Adventurer Club" bg="bg-rose-950"/>
     <Section>
-      <MinistryLayout image={logos[0].src} director={{ name: "John Doe", photo: "/images/john_doe.jpg" }}>
+      <MinistryLayout image={logos[0].src} director={{ name: "Langelihle Noko", photo: "/images/john_doe.jpg" }}>
         <div className="mb-6">
           <p className="text-lg mb-6">The Adventurer Club is a family-centered program that provides fun and challenging activities for children ages 4 to 9. We help children and their families grow closer to Jesus thorugh Bible learning, life skills, and outdoor activities.</p>
         </div>

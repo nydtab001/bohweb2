@@ -27,20 +27,22 @@ function Pathfinders() {
     <Section>
       <MinistryLayout image={logos[1].src} director={{ name: "George Tsumbalagwa", photo: "/images/john_doe.jpg" }}>
         <div className="mb-6">
-          <p className="text-lg mb-6">The Adventurer Club is a family-centered program that provides fun and challenging activities for children ages 4 to 9. We help children and their families grow closer to Jesus thorugh Bible learning, life skills, and outdoor activities.</p>
+          <p className="text-lg mb-6">The Pathfinder Club is a worldwide organization of young people ages 10 to 15, dedicated to building character, developing leadership, and deepening their walk with Christ. Through hands-on learning, service, and adventure, Pathfinders grow spiritually, socially, and physically in a Christ-centered environment.
+</p>
         </div>
         <div className="mb-6">
           <h3 className="text-lg font-bold mb-1">Our Activities</h3>
           <ul className="list-disc list-inside">
-            <li className="text-lg mb-2">Bible lessons and crafts</li>
-            <li className="text-lg mb-2">Family involvement programs that encourage parents to take part in thier children's spiritual growth</li>
-            <li className="text-lg mb-2">Outdoor activities like nature walks and camping</li>
-            <li className="text-lg mb-2">Special events such as Adventurer Day and conference-wide gatherings</li>
+            <li className="text-lg mb-2">Bible study and spiritual development. Encouraging youth to explore Scripture and apply it to daily life.</li>
+            <li className="text-lg mb-2">Skill-building through honors and challenges. From firt aid and camping to creative arts and community service.</li>
+            <li className="text-lg mb-2">Outdoor adventures. Including hiking camping, and survival skills.</li>
+            <li className="text-lg mb-2">Leadership and teamwork. Opportunities to lead, mentor, and serve withing the club and church.</li>
+            <li className="text-lg mb-2">Special events. Pathfinder day, camporees, investiture ceremonies, and regional gatherings.</li>
             </ul>
         </div>
          <div className="mb-6">
           <h3 className="text-lg font-bold mb-1">Get Involved</h3>
-          <p className="text-lg">If you have children within this age group, or if you'd like to werve as a keader or helpers, we welcome you to join the Adventurer club Family.</p>
+          <p className="text-lg">If you have children between the ages of 10 and 15, or if you’re passionate about mentoring youth, we invite you to become part of the Pathfinder Club family. Whether as a member, leader, or volunteer, your involvement helps shape the next generation of Christ-centered leaders.</p>
         </div>
       </MinistryLayout>
     </Section>
