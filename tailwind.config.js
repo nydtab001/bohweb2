@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import textShadow from 'tailwindcss-textshadow';
+
 export default {
   content: [
     "./index.html",
@@ -16,9 +18,14 @@ export default {
         animation: {
           'fade-up': 'fade-up 0.8s ease-out forwards',
         },
+        textShadow: {
+        sm: '1px 1px 2px rgba(0,0,0,0.25)',
+        md: '2px 2px 4px rgba(0,0,0,0.3)',
+        lg: '3px 3px 6px rgba(0,0,0,0.35)',
+      },
       }
     }
   },
-  plugins: [],
+  plugins: [textShadow],
 }
 

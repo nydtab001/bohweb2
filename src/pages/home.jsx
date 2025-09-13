@@ -25,7 +25,7 @@ function Home(){
           { label: "Media ▼", href: "/media/sermons" },
           { label: "Contact Us", href: "/contact" }
         ]}/>        
-<section className="relative md:mt-[113px] mt-[96px] h-[400px] md:h-[550px] py-16 text-center overflow-hidden bg-black">
+<section className="relative md:mt-[113px] mt-[96px] h-[400px] md:h-[620px] py-16 text-center overflow-hidden bg-white">
   {/* Background image */}
   <img
     src={bohbg}
@@ -35,14 +35,11 @@ function Home(){
     decoding="async"
   />
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/20 z-[1]" />
-
   {/* Content */}
-  <h1 className="text-4xl md:text-7xl px-8 md:pt-12 font-bold text-white relative z-10">
+  <h1 className="text-4xl md:text-7xl px-8 md:pt-12 text-shadow-lg font-bold text-white relative z-10">
     Welcome to Beacon of Hope
   </h1>
-  <p className="text-lg md:text-3xl px-8 mt-4 text-white relative z-10">
+  <p className="text-lg md:text-3xl text-shadow-lg px-8 mt-4 text-white relative z-10">
     The Warmest Church South of the Pyramids
   </p>
   <div className="mt-6 relative z-10">
@@ -70,7 +67,7 @@ function Home(){
   <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 text-3xl font-semibold mb-12">Sabbath Livestream</h2>
   <div className="relative w-full max-w-4xl mx-auto aspect-video ">
     <iframe
-      src="https://www.youtube.com/embed/hYsz134PNWQ?si=ka_LiZX3lMJZTSB3"
+      src="https://www.youtube.com/embed/hr0vE1M7PQY?si=fHKZV78RjjewVj10"
       title="Sabbath Livestream"
       className="absolute inset-0 w-full h-full"
       frameBorder="0"

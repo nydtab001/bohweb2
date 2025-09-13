@@ -47,7 +47,8 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
               {sub.children?.map((subm,idxs) => (
                   <Link 
                 key={idxs}
-                href={subm.href}
+                to={subm.href}
+                target={subm.target}
                 className="block px-4 py-2 hover:text-blue-700">
                   {subm.label}
                   </Link>
@@ -74,8 +75,8 @@ export default function PageHeader({ navItems = [] }) {
     { label: "Church Manual", href: "https://gc.adventist.org/wp-content/uploads/2025/07/2022-Seventh-day-Adventist-Church-Manual.pdf", target: "_blank" },
     { label: "Church Leaders ▼", href: "/about/churchleaders", 
       children: [
-        {label: "Pastor", href: "/about/churchleaders/pastor"},
-        {label: "Elders", href: "/about/churchleaders/elders"},
+        {label: "Pastor", href: "/about/#pastor"},
+        {label: "Elders", href: "/about/#elders"},
       ]
     },
   ],
