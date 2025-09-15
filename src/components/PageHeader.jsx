@@ -63,7 +63,17 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
       )
 }
 
-export default function PageHeader({ navItems = [] }) {
+export default function PageHeader() {
+
+  const navItems = [
+            { label: "Home", href: "/" },
+            { label: "About Us ▼", href: "/about" },
+            { label: "Ministries", href: "/ministries" },
+            { label: "Media ▼", href: "/media/sermons" },
+            { label: "Contact Us", href: "/contact" },
+            { label: "Donate", href: "/donate", className: "bg-amber-600 text-white px-4 py-2 rounded-full hover:bg-amber-700 transition" }
+        ];
+
   const [isOpen, setIsOpen] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
@@ -117,7 +127,7 @@ export default function PageHeader({ navItems = [] }) {
         </Link>
 
         {/* Nav Links */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex items-center space-x-6">
           {navItems.map((item, idx) => (
             item.label !== "About Us ▼" && 
             item.label !== "Ministries " &&
@@ -125,7 +135,7 @@ export default function PageHeader({ navItems = [] }) {
             <Link
               key={idx}
               to={item.href}
-              className="text-lg font-medium text-gray-700 hover:text-blue-900"
+              className={item.className ?? "text-lg font-medium text-gray-700 hover:text-blue-900"}
             >
               {item.label}
             </Link>

@@ -15,13 +15,6 @@ function Pathfinders() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
     />
     <SectionHeading title="Pathfinder Club" bg="bg-green-900"/>
     <Section>

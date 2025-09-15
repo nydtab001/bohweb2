@@ -19,15 +19,7 @@ function About() {
           About Us - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
-        <PageHeader
-        navItems={[
-          { label: "Home", href: "/" },
-          { label: "About Us ▼", href: "/about" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Media ▼", href: "/media/sermons" },
-          { label: "Contact Us", href: "/contact" }
-        ]}
-      />
+        <PageHeader/>
       <SectionHeading title="About Us"/>
       <Section>
   <h2 className="md:text-4xl text-2xl font-bold mb-12" id="leaders">Church Leadership</h2>

@@ -15,13 +15,6 @@ function WomensMinistries() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
     />
     <SectionHeading title="Women's Ministries" bg="bg-fuchsia-950"/>
     <Section>

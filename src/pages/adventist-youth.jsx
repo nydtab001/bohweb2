@@ -15,13 +15,7 @@ function YouthMinistries() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
+            
     />
     <SectionHeading title="Adventist Youth Ministries" bg="bg-blue-900" colour="text-yellow-300"/>
     <Section>

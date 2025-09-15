@@ -15,13 +15,7 @@ function Education() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
+           
     />
     <SectionHeading title="Education" bg="bg-sky-900" colour="text-amber-400"/>
     <Section>

@@ -17,14 +17,7 @@ function Home(){
           Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
-        <PageHeader 
-         navItems={[
-          { label: "Home", href: "/" },
-          { label: "About Us ▼", href: "/about" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Media ▼", href: "/media/sermons" },
-          { label: "Contact Us", href: "/contact" }
-        ]}/>        
+        <PageHeader />        
 <section className="relative md:mt-[113px] mt-[96px] h-[400px] md:h-[620px] py-16 text-center overflow-hidden bg-white">
   {/* Background image */}
   <img

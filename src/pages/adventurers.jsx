@@ -14,15 +14,7 @@ function Adventurers() {
           Adventurer Club - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
-    <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
-    />
+    <PageHeader/>
     <SectionHeading title="Adventurer Club" bg="bg-rose-950"/>
     <Section>
       <MinistryLayout image={logos[0].src} director={{ name: "Langelihle Noko", photo: "/images/john_doe.jpg" }}>

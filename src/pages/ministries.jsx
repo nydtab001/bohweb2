@@ -20,15 +20,7 @@ function Ministries() {
           Ministries - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
-        <PageHeader
-        navItems={[
-          { label: "Home", href: "/" },
-          { label: "About Us ▼", href: "/about" },
-          { label: "Ministries", href: "/ministries" },
-          { label: "Media ▼", href: "/media/sermons" },
-          { label: "Contact Us", href: "/contact" }
-        ]}
-      />
+        <PageHeader/>
       <SectionHeading title="Ministries"/>
       <Section>
         <div className="flex flex-col gap-12 md:grid md:grid-cols-4 md:gap-14 px-4 py-8">

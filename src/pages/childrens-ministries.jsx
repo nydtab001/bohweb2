@@ -15,13 +15,7 @@ function ChildrensMin() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
+            
     />
     <SectionHeading title="Children's Ministries" bg="bg-violet-950" colour="text-red-500"/>
     <Section>

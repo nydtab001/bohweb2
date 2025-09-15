@@ -15,13 +15,6 @@ function Stewardship() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
     />
     <SectionHeading title="Stewardship" bg="bg-violet-950" colour="text-amber-500"/>
     <Section>

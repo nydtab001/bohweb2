@@ -12,15 +12,7 @@ function DonatePage() {
           Donate - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
-        <PageHeader
-        navItems={[
-            { label: "Home", href: "/" },
-            { label: "About Us ▼", href: "/about" },
-            { label: "Ministries", href: "/ministries" },
-            { label: "Media ▼", href: "/media/sermons" },
-            { label: "Contact Us", href: "/contact" }
-        ]}
-      />
+        <PageHeader/>
       <SectionHeading title="Donate"/>
       <Section>
          <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-8 text-center">

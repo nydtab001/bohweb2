@@ -15,13 +15,6 @@ function MusicDep() {
         </title>
       </Helmet>
     <PageHeader
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About Us ▼", href: "/about" },
-              { label: "Ministries", href: "/ministries" },
-              { label: "Media ▼", href: "/media/sermons" },
-              { label: "Contact Us", href: "/contact" }
-            ]}
     />
     <SectionHeading title="Music Department" bg="bg-sky-800" colour="text-slate-300"/>
     <Section>
