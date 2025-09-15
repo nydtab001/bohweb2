@@ -30,7 +30,7 @@ function About() {
       />
       <SectionHeading title="About Us"/>
       <Section>
-  {/* <h2 className="md:text-4xl text-2xl font-bold mb-12">Church Leadership</h2> */}
+  <h2 className="md:text-4xl text-2xl font-bold mb-12" id="leaders">Church Leadership</h2>
   <h2 className="md:text-4xl text-2xl font-bold mb-8" id="elders">Pastor</h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:mb-16 mb-10 md:grid-cols-3 gap-8">
     {leaders.filter(m=>m.role==="Pastor").map((leader, index) => (
@@ -69,7 +69,7 @@ function About() {
   </div>
       </Section>
       <Footer/>
-      </>
+    </>
   );
 }
 

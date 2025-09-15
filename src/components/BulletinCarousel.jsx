@@ -18,6 +18,7 @@ export default function MultiPageBulletinCarousel({bulletins}) {
 
   const currentBulletin = bulletins[bulletinIndex];
   const currentPage = currentBulletin.pages[pageIndex];
+  const nextP = currentBulletin.pages[(pageIndex + 1) % currentBulletin.pages.length];
   const currentPages = currentBulletin.pages;
 
     useEffect(() => {
@@ -41,14 +42,13 @@ export default function MultiPageBulletinCarousel({bulletins}) {
   };
 
   return (
-    <section className="md:py-12 md:px-6 bg-white text-center">
+    <section className="md:py-12 pb-10 md:px-6 bg-white text-center">
       <Helmet>
   <link rel="preload" as="image" href={bulletins[0].pages[0]} />
 </Helmet>
       <h2 className="md:text-5xl text-2xl font-semibold mb-2">Sabbath Bulletins</h2>
-      <p className="md:text-lg text-base text-gray-600 md:mb-12 mb-6">{currentBulletin.date} – Page {pageIndex + 1}</p>
+      <p className="md:text-lg text-base text-gray-600 md:mb-12 mb-6">{currentBulletin.date} – Page {isMobileScreen ? pageIndex+1 : `${pageIndex + 1}/${pageIndex + 2}`}</p>
 
-      <div className="relative w-full aspect-[210/297] mx-auto">
         {/* <img
           src={currentPage}
           alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
@@ -56,18 +56,23 @@ export default function MultiPageBulletinCarousel({bulletins}) {
         /> */}
         <div className="overflow-hidden w-full h-auto shadow-md">
             <div className="w-full h-full flex items-center justify-center">
+  {!isMobileScreen && (
+  <div className="relative w-full flex aspect-[297/210] mx-auto">
   <img
     key={`${bulletinIndex}-${pageIndex}`}
     src={currentPage}
     alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
-    className={`w-full object-contain shadow-md transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
+    className={`w-1/2 object-contain shadow-lg transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
     loading="lazy"
   />
-</div>
-
-        </div>
-
-        {/* Page navigation */}
+  <img
+    key={`${bulletinIndex}-${pageIndex+1}`}
+    src={nextP}
+    alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
+    className={`w-1/2 object-contain shadow-lg transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
+    loading="lazy"
+  />
+   {/* Page navigation */}
         <button
           onClick={prevPage}
           className="absolute top-1/2 -translate-y-1/2 bg-blue-950/50 text-white ml-0 py-2 border-none rounded-l w-8 h-10 md:w-12 md:h-14 left-0 hover:bg-gray-700"
@@ -80,7 +85,34 @@ export default function MultiPageBulletinCarousel({bulletins}) {
         >
           <NextButton height='5em' width='5em'/>
         </button>
-      </div>
+  </div>)}
+  {isMobileScreen && (
+    <div className="relative w-full aspect-[210/297] mx-auto">
+    <img
+    key={`${bulletinIndex}-${pageIndex}`}
+    src={currentPage}
+    alt={`Bulletin ${currentBulletin.date} Page ${pageIndex + 1}`}
+    className={`w-full object-contain shadow-md transition-opacity duration-1000 ease-in-out ${visible ? 'opacity-100' : 'opacity-0' }`}
+    loading="lazy"
+  />
+   {/* Page navigation */}
+        <button
+          onClick={prevPage}
+          className="absolute top-1/2 -translate-y-1/2 bg-blue-950/50 text-white ml-0 py-2 border-none rounded-l w-8 h-10 md:w-12 md:h-14 left-0 hover:bg-gray-700"
+        >
+          <PrevButton height='5em' width='5em'/>
+        </button>
+        <button
+          onClick={nextPage}
+          className="absolute top-1/2 -translate-y-1/2 bg-blue-950/50 text-white mr-0 py-2 border-none rounded-r w-8 h-10 md:w-12 md:h-14 right-0 hover:bg-gray-700"
+        >
+          <NextButton height='5em' width='5em'/>
+        </button>
+    </div>)
+  }
+</div>
+
+        </div>
 
       {/* Bulletin navigation */}
       <div className="mt-6 flex justify-center gap-4">

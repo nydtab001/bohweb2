@@ -24,6 +24,7 @@ import ChildrensMin from './pages/childrens-ministries.jsx';
 import Stewardship from './pages/stewardship.jsx';
 import FamilyMin from './pages/family-ministries.jsx';
 import PrayerMin from './pages/prayer-ministries.jsx';
+import DonatePage from './pages/donate.jsx';
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
       <Route path="/ministries/stewardship" element={<Stewardship/>}/>
       <Route path="/ministries/family-ministries" element={<FamilyMin/>}/>
       <Route path="/ministries/prayer-ministries" element={<PrayerMin/>}/>
+      <Route path="/donate" element={<DonatePage/>}/>
       {/* Add more routes as needed */}
     </Routes>
     </Router>

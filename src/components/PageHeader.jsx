@@ -31,7 +31,7 @@ function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownConten
                 <div
                 onMouseEnter={() => setsub(sub.label)}
                 onMouseLeave={() => setsub(null)}
-                className="text-gray-700 hover:text-blue-900 relative bg-white border w-48"
+                className="text-gray-700 hover:text-blue-900 relative bg-white shadow-md w-48"
                 >
                 <Link 
                 key={idx}
@@ -73,7 +73,7 @@ export default function PageHeader({ navItems = [] }) {
   "About Us ▼": [
     { label: "Official beliefs", href: "https://www.adventist.org/beliefs/", target: "_blank" },
     { label: "Church Manual", href: "https://gc.adventist.org/wp-content/uploads/2025/07/2022-Seventh-day-Adventist-Church-Manual.pdf", target: "_blank" },
-    { label: "Church Leaders ▼", href: "/about/churchleaders", 
+    { label: "Church Leaders ▼", href: "/about/#leaders", 
       children: [
         {label: "Pastor", href: "/about/#pastor"},
         {label: "Elders", href: "/about/#elders"},

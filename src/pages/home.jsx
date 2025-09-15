@@ -60,11 +60,34 @@ function Home(){
   </p>
 </Section>
 </section>
-<section className="md:px-16 max-w-6xl mx-auto px-8 md:pt-10 pt-8">
+<section className="md:px-16 max-w-6xl mx-auto px-8 md:pt-10 md:pb-10 pt-8">
   <MultiPageBulletinCarousel bulletins={bulletinData} />
 </section>
-<section className="pt-8 bg-white text-center px-8">
-  <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 text-3xl font-semibold mb-12">Sabbath Livestream</h2>
+<section className="bg-blue-900 ">
+<Section className="py-12 md:pt-10 pt-8 text-center border-t border-gray-200">
+  <h2 className="text-2xl md:text-5xl font-semibold text-white mb-4">
+    Partner With Us in Building God's House
+  </h2>
+  <p className="md:text-2xl text-lg text-white max-w-full mx-auto mb-8">
+    Beacon of Hope is expanding its church structure to create more space for worship, youth programs, and community outreach. Your support helps us lay every brick with purpose and prayer.
+  </p>
+  <div className="flex justify-center">
+    <a
+      href="https://your-donation-link.com" // Replace with actual donation URL
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-colors duration-200"
+    >
+      Donate to the Expansion Project
+    </a>
+  </div>
+  <p className="mt-6 text-sm text-white">
+    Every contribution brings us closer to a space where faith, fellowship, and service can flourish.
+  </p>
+</Section>
+</section>
+<section className="md:pt-16 bg-white text-center md:pb-16 px-8">
+  <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 pt-4 text-3xl font-semibold mb-12">Sabbath Livestream</h2>
   <div className="relative w-full max-w-4xl mx-auto aspect-video ">
     <iframe
       src="https://www.youtube.com/embed/hr0vE1M7PQY?si=fHKZV78RjjewVj10"
