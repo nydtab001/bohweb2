@@ -9,13 +9,13 @@ function DonatePage() {
         <>
     <Helmet>
         <title>
-          Donate - Beacon of Hope Seventh-day Adventist Church
+          Give - Beacon of Hope Seventh-day Adventist Church
         </title>
       </Helmet>
         <PageHeader/>
-      <SectionHeading title="Donate"/>
+      <SectionHeading title="Give"/>
       <Section>
-         <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-8 text-center">
+         <h2 className="text-2xl md:text-4xl font-bold text-blue-900 mb-8 text-center" id="building-fund">
     Building Fund Contributions
   </h2>
   <p className="text-lg text-gray-700 max-w-5xl mx-auto mb-10 text-center">

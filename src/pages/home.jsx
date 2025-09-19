@@ -7,6 +7,9 @@ import Section from "../components/Section";
 import { useNavigate } from "react-router-dom";
 import bulletinData from "../data/bulletins.json";
 import MultiPageBulletinCarousel from "../components/BulletinCarousel";
+import BgCarousel from "../components/BgCarousel";
+import backgrounds from "../data/backgrounds.json";
+import DonatePage from "./donate";
 
 function Home(){
     const navigate = useNavigate();
@@ -18,18 +21,21 @@ function Home(){
         </title>
       </Helmet>
         <PageHeader />        
-<section className="relative md:mt-[113px] mt-[96px] h-[400px] md:h-[620px] py-16 text-center overflow-hidden bg-white">
+<section className="relative md:mt-[113px] mt-[96px] max-sm:h-[300px] h-[400px] md:h-[620px] text-center">
   {/* Background image */}
-  <img
+  {/* <img
     src={bohbg}
     alt="Beacon of Hope background"
     className="absolute inset-0 w-full h-full object-cover z-[0]"
     loading="eager"
     decoding="async"
-  />
+  /> */}
+  <div className="absolute inset-0 h-full m-auto z-0 overflow-hidden">
+    <BgCarousel slides={backgrounds} />
+  </div>
 
   {/* Content */}
-  <h1 className="text-4xl md:text-7xl px-8 md:pt-12 text-shadow-lg font-bold text-white relative z-10">
+  {/* <h1 className="text-4xl md:text-7xl px-8 md:pt-12 text-shadow-lg font-bold text-white relative z-10">
     Welcome to Beacon of Hope
   </h1>
   <p className="text-lg md:text-3xl text-shadow-lg px-8 mt-4 text-white relative z-10">
@@ -42,7 +48,7 @@ function Home(){
     >
       Listen to Sermons
     </button>
-  </div>
+  </div> */}
 </section>
 
 <section className="bg-gray-100">
@@ -66,8 +72,7 @@ function Home(){
   </p>
   <div className="flex justify-center">
     <a
-      href="https://your-donation-link.com" // Replace with actual donation URL
-      target="_blank"
+      href="/give#building-fund" // Replace with actual donation URL
       rel="noopener noreferrer"
       className="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-colors duration-200"
     >
@@ -79,8 +84,8 @@ function Home(){
   </p>
 </Section>
 </section>
-<section className="md:pt-16 bg-white text-center md:pb-16 px-8">
-  <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 pt-4 text-3xl font-semibold mb-12">Sabbath Livestream</h2>
+<section className="md:pt-16 bg-white text-center md:pb-16">
+  <h2 className="md:text-5xl max-sm:text-2xl max-sm:mb-8 pt-8 text-3xl font-semibold mb-12">Sabbath Livestream</h2>
   <div className="relative w-full max-w-4xl mx-auto aspect-video ">
     <iframe
       src="https://www.youtube.com/embed/hr0vE1M7PQY?si=fHKZV78RjjewVj10"
