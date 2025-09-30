@@ -8,10 +8,29 @@ import SectionHeading from '../components/SectionHeading';
 import UnderConstruction from "../components/under_construction";
 import Section from "../components/Section";
 import leaders from "../data/leaders.json";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const date = new Date();
 
 function About() {
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+         const yOffset = -123; // 👈 your desired offset in pixels
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, left: 0, behavior: 'smooth'});
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [hash]);
+
   return (
     <>
       <Helmet>
@@ -23,7 +42,7 @@ function About() {
       <SectionHeading title="About Us"/>
       <Section>
   <h2 className="md:text-4xl text-2xl font-bold mb-12" id="leaders">Church Leadership</h2>
-  <h2 className="md:text-4xl text-2xl font-bold mb-8" id="elders">Pastor</h2>
+  <h2 className="md:text-4xl text-2xl font-bold mb-8" id="pastor">Pastor</h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:mb-16 mb-10 md:grid-cols-3 gap-8">
     {leaders.filter(m=>m.role==="Pastor").map((leader, index) => (
       <div key={index} className="bg-amber-800 rounded-lg shadow-md p-6 text-center">
@@ -47,7 +66,7 @@ function About() {
       </div>
     ))}
   </div>
-  <h2 className="md:text-4xl text-2xl font-bold mb-8">Deacons</h2>
+  <h2 className="md:text-4xl text-2xl font-bold mb-8" id="deacons">Deacons</h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-6 gap-8">
     {leaders.filter(m=>m.role==="Deacon" | m.role==="Deaconess").map((leader, index) => (
       <div key={index} className="bg-indigo-50 rounded-lg shadow-md p-6 text-center">

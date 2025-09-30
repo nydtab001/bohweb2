@@ -1,24 +1,27 @@
 // src/components/PageHeader.jsx
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "/bohlogo.png"; // Update the path to your church logo
 import { useState } from 'react';
 import MobileDropdown from "./MobileDropdown";
+
 
 function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownContent){
   const isactive = open === item.label
   const subactive = subopen === dropdownContent[item.label].label
   const submenu = dropdownContent[item.label];
+  const location = useLocation();
+
       return(
         <>
         <div
-        className="relative"
+        className="relative text-align:center"
         onMouseEnter={() => setopen(item.label)}
         onMouseLeave={() => setopen(null)}
         >
           <Link 
               key={idx}
               to={item.href}
-              className="text-lg font-medium text-gray-700 hover:text-blue-900"
+              className={item.className ?? `text-lg font-medium mx-auto transition-colors duration-300 ${location.pathname === item.href ? "text-blue-900 border-b-2 border-blue-900" : "text-gray-700 hover:text-blue-900" }`}
           >
               {item.label}
           </Link>
@@ -87,6 +90,7 @@ export default function PageHeader() {
       children: [
         {label: "Pastor", href: "/about/#pastor"},
         {label: "Elders", href: "/about/#elders"},
+        {label: "Deacons", href: "/about/#deacons"},
       ]
     },
   ],
@@ -135,7 +139,7 @@ export default function PageHeader() {
             <Link
               key={idx}
               to={item.href}
-              className={item.className ?? "text-lg font-medium text-gray-700 hover:text-blue-900"}
+              className={item.className ?? `text-lg font-medium mx-auto transition-colors duration-300 ${location.pathname === item.href ? "text-blue-900 border-b-2 border-blue-900" : "text-gray-700 hover:text-blue-900" }`}
             >
               {item.label}
             </Link>

@@ -44,15 +44,23 @@ export default function Contact(){
         </div>
         <div className="mt-8 bg-yellow-50 p-8 rounded-lg">
           <h3 className="text-lg font-semibold mb-2">Church Contact Directory</h3>
-          <p><strong>Pastor:</strong> John Doe<br/>Phone: <a className="text-orange-800 underline" href="tel:#">+263 77 987 6543</a><br/>
+          <p><strong>Pastor:</strong> Clifford Sibanda<br/>Phone: <a className="text-orange-800 underline" href="tel:#">+263 77 987 6543</a><br/>
           Email: <a className="text-orange-800 underline" href="mailto:#">pastor@wzc.adventist.org</a></p>
-          <p className="mt-4"><strong>Church Clerk:</strong> Jane Smith<br/>
-          Phone: <a className="text-orange-800 underline" href="tel:#">+263 77 555 1234</a>
-          <br/>
-          Email: <a className="text-orange-800 underline" href="mailto:#">clerk@wzc.adventist.org</a></p>
           <p className="mt-4"><strong>Head Elder:</strong> Michael Ncube<br/>Phone: +263 77 222 3344<br/>Email: elder@wzc.adventist.org</p>
           <p className="mt-4"><strong>Communications Department</strong><br/>
           Email: <a className="text-orange-800 underline" href="mailto:bohsdacomms@gmail.com">bohsdacomms@gmail.com</a></p>
+          <p className="mt-4"><strong>Church Clerk:</strong> Faith Ncube(Head)<br/>
+          Phone: <a className="text-orange-800 underline" href="tel:#">+263 77 555 1234</a>
+          <br/>
+          Email: <a className="text-orange-800 underline" href="mailto:#">clerk@wzc.adventist.org</a></p>
+          <p className="mt-4"><strong>Church Clerk:</strong> Charity Ngwenya<br/>
+          Phone: <a className="text-orange-800 underline" href="tel:#">+263 77 555 1234</a>
+          <br/>
+          Email: <a className="text-orange-800 underline" href="mailto:#">clerk@wzc.adventist.org</a></p>
+          <p className="mt-4"><strong>Church Clerk:</strong> Bridget Maplanka<br/>
+          Phone: <a className="text-orange-800 underline" href="tel:#">+263 77 555 1234</a>
+          <br/>
+          Email: <a className="text-orange-800 underline" href="mailto:#">clerk@wzc.adventist.org</a></p>
         </div>
         </Section>
         <Footer/>
