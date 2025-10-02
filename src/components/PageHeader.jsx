@@ -147,7 +147,7 @@ const handleSearch = (e) => {
 
         {/* Nav Links */}
         <nav className="hidden md:flex items-center space-x-6">
-         <form onSubmit={handleSearch} className="flex items-center space-x-2">
+         {/* <form onSubmit={handleSearch} className="flex items-center space-x-2">
   <input
     type="text"
     placeholder="Search..."
@@ -161,7 +161,7 @@ const handleSearch = (e) => {
   >
     🔍
   </button>
-</form>
+</form> */}
 
           {navItems.map((item, idx) => (
             item.label !== "About Us ▼" && 
