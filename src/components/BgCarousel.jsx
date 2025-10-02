@@ -43,7 +43,7 @@ function BgCarousel({ slides, children }) {
                     alt={slide.alt}
                     key={index}
                     className={`w-full h-full absolute inset-0 object-cover transition-opacity duration-2000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 />
                 <AnimatePresence>

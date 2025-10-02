@@ -25,6 +25,7 @@ import Stewardship from './pages/stewardship.jsx';
 import FamilyMin from './pages/family-ministries.jsx';
 import PrayerMin from './pages/prayer-ministries.jsx';
 import DonatePage from './pages/donate.jsx';
+import SearchResults from './pages/SearchResults.jsx';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
       <Route path="/ministries/family-ministries" element={<FamilyMin/>}/>
       <Route path="/ministries/prayer-ministries" element={<PrayerMin/>}/>
       <Route path="/give" element={<DonatePage/>}/>
+      <Route path="/search" element={<SearchResults allItems={allItems} />} />
       {/* Add more routes as needed */}
     </Routes>
     </Router>

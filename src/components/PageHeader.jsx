@@ -1,8 +1,9 @@
 // src/components/PageHeader.jsx
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "/bohlogo.png"; // Update the path to your church logo
 import { useState } from 'react';
 import MobileDropdown from "./MobileDropdown";
+
 
 
 function renderDropDown(open,setopen, subopen, setsub, item, idx, dropdownContent){
@@ -81,6 +82,20 @@ export default function PageHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [subopen, setsub] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+//   const filteredResults = allItems.filter(item =>
+//   item.title.toLowerCase().includes(searchQuery.toLowerCase())
+// );
+
+const handleSearch = (e) => {
+  e.preventDefault();
+  if (searchQuery.trim()) {
+    navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+  }
+};
+
+
 
   const dropdownContent = {
   "About Us ▼": [
@@ -132,6 +147,22 @@ export default function PageHeader() {
 
         {/* Nav Links */}
         <nav className="hidden md:flex items-center space-x-6">
+         <form onSubmit={handleSearch} className="flex items-center space-x-2">
+  <input
+    type="text"
+    placeholder="Search..."
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    className="px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-900"
+  />
+  <button
+    type="submit"
+    className="text-blue-900 hover:text-blue-700"
+  >
+    🔍
+  </button>
+</form>
+
           {navItems.map((item, idx) => (
             item.label !== "About Us ▼" && 
             item.label !== "Ministries " &&
