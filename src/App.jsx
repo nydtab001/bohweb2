@@ -56,7 +56,7 @@ function App() {
       <Route path="/ministries/family-ministries" element={<FamilyMin/>}/>
       <Route path="/ministries/prayer-ministries" element={<PrayerMin/>}/>
       <Route path="/give" element={<DonatePage/>}/>
-      <Route path="/search" element={<SearchResults allItems={allItems} />} />
+      {/* <Route path="/search" element={<SearchResults allItems={allItems} />} /> */}
       {/* Add more routes as needed */}
     </Routes>
     </Router>
