@@ -19,9 +19,9 @@ function Home(){
         <title>
           Beacon of Hope Seventh-day Adventist Church
         </title>
-        <link rel="preload" as="image" href="backgrounds/bg1.jpg" />
-        <link rel="preload" as="image" href="backgrounds/bg2.jpg" />
-        <link rel="preload" as="image" href="backgrounds/bg3.jpg" />
+        <link rel="preload" as="image" href="backgrounds/bg1.webp" />
+        <link rel="preload" as="image" href="backgrounds/bg2.webp" />
+        <link rel="preload" as="image" href="backgrounds/bg3.webp" />
       </Helmet>
         <PageHeader />        
 <section className="relative md:mt-[113px] mt-[96px] max-sm:h-[300px] h-[400px] md:h-[620px] text-center">

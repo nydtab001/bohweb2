@@ -1,6 +1,6 @@
 [
     {
-        "src": "backgrounds/bg1.jpg",
+        "src": "backgrounds/bg1.webp",
         "alt": "Home Page Header",
         "h1": "Welcome to Beacon of Hope",
         "p": "The Warmest Church South of the Pyramids",
@@ -8,7 +8,7 @@
         "pstyle": "text-lg md:text-3xl px-8 mt-4 text-white drop-shadow-md pointer-events-none"
     },
     {
-        "src": "backgrounds/bg2.jpg",
+        "src": "backgrounds/bg2.webp",
         "alt": "About Us Page Header",
          "h1": "Where two or three gather, He is there",
         "p": "In shared prayer, we meet God and each other",
@@ -16,7 +16,7 @@
         "pstyle": "text-white text-lg md:text-3xl drop-shadow-lg mb-6"
     },
     {
-        "src": "backgrounds/bg3.jpg",
+        "src": "backgrounds/bg3.webp",
         "alt": "Services Page Header",
          "h1": "“Speak, Lord, for Your servant is listening.”",
         "p": "Every moment in His presence is a chance to grow",
