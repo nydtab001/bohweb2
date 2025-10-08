@@ -4,16 +4,16 @@
         "alt": "Home Page Header",
         "h1": "Welcome to Beacon of Hope",
         "p": "The Warmest Church South of the Pyramids",
-        "h1style": "text-4xl md:text-7xl px-8 md:pt-12 font-bold text-white drop-shadow-lg pointer-events-none",
-        "pstyle": "text-lg md:text-3xl px-8 mt-4 text-white drop-shadow-md pointer-events-none"
+        "h1style": "text-4xl md:text-7xl px-8 md:pt-12 font-bold text-white text-shadow-lg drop-shadow-lg pointer-events-none",
+        "pstyle": "text-lg md:text-3xl px-8 mt-4 text-white text-shadow-lg drop-shadow-md pointer-events-none"
     },
     {
         "src": "backgrounds/bg2.webp",
         "alt": "About Us Page Header",
          "h1": "Where two or three gather, He is there",
         "p": "In shared prayer, we meet God and each other",
-        "h1style": "text-white text-3xl md:text-7xl font-bold drop-shadow-lg mb-2",
-        "pstyle": "text-white text-lg md:text-3xl drop-shadow-lg mb-6"
+        "h1style": "text-white text-3xl md:text-7xl font-bold text-shadow-lg drop-shadow-lg mb-2",
+        "pstyle": "text-white text-lg md:text-3xl text-shadow-lg drop-shadow-lg mb-6"
     },
     {
         "src": "backgrounds/bg3.webp",
