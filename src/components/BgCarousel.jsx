@@ -92,7 +92,7 @@ function BgCarousel({ slides, children }) {
         </div>
         <div className="absolute bottom-4 w-full flex justify-center gap-2 z-50">
            {slides.map((s,i) => (
-            <div key={i} onClick={() => setCurrentIndex(i)} className={`max-sm:h-3 max-sm:w-3 h-5 w-5 rounded-full cursor-pointer ${i===currentIndex ? 'bg-white' : 'bg-gray-600'}`}></div>
+            <div key={i} onClick={() => setCurrentIndex(i)} className={`max-sm:h-3 max-sm:w-3 h-5 w-5 rounded-full cursor-pointer ${i===currentIndex ? 'bg-white' : 'bg-none border-2'}`}></div>
            ))}
         </div>
         </div>
