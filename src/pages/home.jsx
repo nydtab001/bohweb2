@@ -22,6 +22,7 @@ function Home(){
         <link rel="preload" as="image" href="backgrounds/bg1.webp" />
         <link rel="preload" as="image" href="backgrounds/bg2.webp" />
         <link rel="preload" as="image" href="backgrounds/bg3.webp" />
+        <link rel="preload" as="image" href="/bohlogo.png" />
       </Helmet>
         <PageHeader />        
 <section className="relative md:mt-[113px] mt-[96px] max-sm:h-[300px] h-[400px] md:h-[620px] text-center">
