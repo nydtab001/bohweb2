@@ -43,7 +43,7 @@ function BgCarousel({ slides, children }) {
                     alt={slide.alt}
                     key={index}
                     className={`w-full h-full absolute inset-0 object-cover transition-opacity duration-2000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                    loading="eager"
+                    loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
                 />
                 <AnimatePresence>
@@ -51,7 +51,7 @@ function BgCarousel({ slides, children }) {
     <motion.div
       key={slide.h1} // ensures unique animation per slide
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 1.5 } }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 1 } }}
       exit={{ opacity: 0, transition: { duration: 0.5, ease: "easeIn" } }}
       className="absolute inset-0 h-full w-full flex flex-col justify-center items-center text-center px-4 z-50"
     >
