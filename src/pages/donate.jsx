@@ -98,7 +98,7 @@ function DonatePage() {
       
 
       <Section>
-        <div id="give-section" className="max-w-6xl mx-auto px-6">
+        <div id="give-section" className="max-w-6xl">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-6 text-center" id="building-fund">Building Fund Contributions</h2>
 
           <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-8 text-center">Help us expand Beacon of Hope Church. You can contribute via bank transfer or online through Paynow. Every brick tells a story — your support builds community and hope.</p>
