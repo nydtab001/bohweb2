@@ -8,18 +8,17 @@ import Footer from "../components/Footer";
 function DonatePage() {
   const [amount, setAmount] = useState(50);
   // example fundraising numbers (replace with real data later)
-  const goal = 100000;
-  const [raised, setRaised] = useState(20250);
+  const goal = 150000;
+  const [raised, setRaised] = useState(20000);
   const percent = Math.min(100, Math.round((raised / goal) * 100));
   const [animatedPercent, setAnimatedPercent] = useState(0);
-
   useEffect(() => {
     // small delay so the fill animates on mount
     const t = setTimeout(() => setAnimatedPercent(percent), 150);
     return () => clearTimeout(t);
   }, [percent]);
   const suggested = [10, 25, 50, 100, 250];
-  const milestones = [100, 80, 60, 40, 20, 0];
+  const milestones = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0];
 
   const detailsRef = useRef(null);
   const [detailsVisible, setDetailsVisible] = useState(false);
@@ -99,50 +98,91 @@ function DonatePage() {
 
       <Section>
         <div id="give-section" className="max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-6 text-center" id="building-fund">Building Fund Contributions</h2>
+          
 
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-8 text-center">Help us expand Beacon of Hope Church. You can contribute via bank transfer or online through Paynow. Every brick tells a story — your support builds community and hope.</p>
-
-          {/* (Removed Fast Online Donation CTA as requested) */}
-
-          {/* Video */}
           {/* Thermometer-style Vertical Meter */}
           <div className="max-w-6xl mx-auto mb-10 w-full">
-          <div className="bg-blue-700 rounded-lg p-6 flex flex-col md:flex-row md:items-center gap-6 w-full ring-1 ring-white/20">
-              <div className="w-full md:w-1/3 flex flex-col items-center">
-                <div className="flex items-center gap-4">
-                  {/* Milestone graduations */}
-                  <div className="flex flex-col justify-between h-64">
-                    {milestones.map((m) => {
-                      const value = Math.round((m / 100) * goal);
-                      return (
-                        <div key={m} className="flex items-center justify-end gap-2">
-                          <span className="text-xs text-white/80">${value.toLocaleString()}</span>
-                          <div className="w-6 h-[1px] bg-white/30" />
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Thermometer tube */}
-                  <div className="w-20 h-64 bg-white rounded-full border-8 border-white relative overflow-hidden flex items-end" role="img" aria-label={`Progress: ${percent}%`}>
-                    <div className={`absolute bottom-0 left-0 right-0 transition-all ${fillColorClass(percent)}`} style={{ height: `${animatedPercent}%` }} />
-                  </div>
-                </div>
-
-                <div className="mt-4 text-white text-center">
-                  <div className="text-2xl font-bold">${raised.toLocaleString()}</div>
-                  <div className="text-sm text-white">of ${goal.toLocaleString()}</div>
-                </div>
+          <div className="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl p-8 md:p-10 w-full shadow-xl">
+              {/* Header */}
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-5xl font-black text-gray-800 tracking-tight mb-2">CHURCH BUILDING</h2>
+                <h2 className="text-3xl md:text-5xl font-black text-gray-700 tracking-tight">TRACKER</h2>
               </div>
 
-              <div className="w-full md:flex-1 flex flex-col items-center text-white text-center" ref={detailsRef}>
-                <h4 className={`text-2xl md:text-4xl font-semibold transition-all ${detailsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>Help us reach our goal</h4>
-                <p className={`md:text-lg text-md text-white mt-2 transition-all ${detailsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>Raised <span className="font-semibold">${raised.toLocaleString()}</span> of <span className="font-semibold">${goal.toLocaleString()}</span>. Your gift brings us closer—thank you!</p>
-                {/* horizontal progress bar removed as requested */}
+              <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+                {/* Left side - Goal and content */}
+                <div className="w-full md:w-1/2 flex flex-col">
+                  <div className="bg-white/90 rounded-2xl p-6 mb-6">
+                    <div className="text-sm font-bold text-gray-600 mb-2">OUR GOAL</div>
+                    <div className="text-4xl md:text-5xl font-black text-gray-800">USD {(goal / 1000).toFixed(0)} 000</div>
+                  </div>
+
+                  <div className="text-white space-y-4 mb-6">
+                    <p className="text-lg italic leading-relaxed">"And I say also unto thee, That thou art Peter, and upon this rock I will build my church, and the gates of hell shall not prevail against it."</p>
+                    <p className="text-sm font-semibold">Matthew 16:18</p>
+                  </div>
+
+                  {/* Project Images */}
+                  <div className="space-y-4 mb-6">
+                    <div className="rounded-xl overflow-hidden shadow-lg">
+                      <img src="/project/church_view.jpg" alt="Church Exterior View" className="w-full h-auto object-cover" />
+                    </div>
+                    <div className="rounded-xl overflow-hidden shadow-lg">
+                      <img src="/project/church_interior.jpg" alt="Church Interior" className="w-full h-auto object-cover" />
+                    </div>
+                    <div className="rounded-xl overflow-hidden shadow-lg">
+                      <img src="/project/church_aerial.jpg" alt="Church Aerial View" className="w-full h-auto object-cover" />
+                    </div>
+                  </div>
+
+                  <div className="mt-auto">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 text-center">
+                      <h3 className="text-4xl md:text-6xl font-black text-white mb-2">DO YOUR</h3>
+                      <h3 className="text-4xl md:text-6xl font-black text-white">PART</h3>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right side - Thermometer */}
+                <div className="w-full md:w-1/2 flex flex-col">
+                  <div className="text-center mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">WHERE WE ARE</h3>
+                  </div>
+
+                  <div className="flex items-start justify-center gap-4">
+                    {/* Milestone graduations */}
+                    <div className="flex flex-col justify-between h-[250px] md:h-[450px]">
+                      {milestones.map((m) => {
+                        const value = Math.round((m / 100) * goal);
+                        return (
+                          <div key={m} className="flex items-center justify-end gap-2">
+                            <span className="text-xs font-semibold text-white">USD {value.toLocaleString()}</span>
+                            <div className="w-6 h-[2px] bg-white" />
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Thermometer tube */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-[78px] h-[250px] md:h-[450px] bg-white/80 rounded-t-full border-[9px] border-b-0 -mt-1 border-white relative overflow-hidden flex items-end z-10" role="img" aria-label={`Progress: ${percent}%`}>
+                        <div className={`absolute bottom-0 left-0 right-0 transition-all ${fillColorClass(percent)}`} style={{ height: `${animatedPercent}%` }} />
+                      </div>
+                      {/* Thermometer base */}
+                      <div className={`w-[104px] h-[104px] rounded-full border-[12px] border-t-0 border-white transition-all -mt-5 ${fillColorClass(percent)}`} />
+                    </div>
+                  </div>
+
+                  <div className="mt-6 text-white text-center">
+                    <div className="text-3xl font-black">${raised.toLocaleString()}</div>
+                    <div className="text-sm font-semibold text-white/90">of ${goal.toLocaleString()} raised</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-8 text-center">Help us expand Beacon of Hope Church. You can contribute via bank transfer or online through Paynow. Every brick tells a story — your support builds community and hope.</p>
 
           {/* Video */}
           <div className="aspect-video w-full mb-12 rounded-lg overflow-hidden shadow-lg">
