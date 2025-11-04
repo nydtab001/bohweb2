@@ -17,7 +17,7 @@ import YouthMinistries from './pages/adventist-youth.jsx';
 import SabbathSchool from './pages/sabbath-school.jsx';
 import Communications from './pages/communications.jsx';
 import MasterGuide from './pages/master-guide.jsx';
-import MusicDep from './pages/music-department.jsx';
+import PossibilityMinistries from './pages/possibility-ministries.jsx';
 import Education from './pages/education-department.jsx';
 import Health from './pages/health-ministries.jsx';
 import ChildrensMin from './pages/childrens-ministries.jsx';
@@ -44,7 +44,7 @@ function App() {
       <Route path="/ministries/womens-ministries" element={<WomensMinistries/>}/>
       <Route path="/ministries/communications" element={<Communications/>}/>
       <Route path="/ministries/master-guide" element={<MasterGuide/>}/>
-      <Route path="/ministries/music-department" element={<MusicDep/>}/>
+      <Route path="/ministries/possibility-ministries" element={<PossibilityMinistries/>}/>
       <Route path="/ministries/education-department" element={<Education/>}/>
       <Route path="/ministries/health-ministries" element={<Health/>}/>
       <Route path="/ministries/adventist-youth-ministries" element={<YouthMinistries/>}/>

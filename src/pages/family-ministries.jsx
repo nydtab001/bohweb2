@@ -27,9 +27,28 @@ function FamilyMin() {
 
         <div className="mb-6">
           <h3 className="text-2xl font-bold mb-3 text-cyan-900">Our Mission</h3>
-          <p className="text-lg mb-3">To equip and empower families to experience God's ideal for relationships, grow in faith together, and fulfill their divine purpose in the home, church, and community.</p>
+          <p className="text-lg mb-3">The Department of Family Ministries seeks to empower, and to bring hope and healing to marriages, families, and individuals through the saving grace of Jesus Christ.</p>
           <div className="bg-cyan-50 p-5 rounded-lg">
             <p className="text-lg italic text-cyan-900">"As for me and my household, we will serve the Lord." - Joshua 24:15</p>
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="text-2xl font-bold mb-3 text-cyan-900">Our Objectives</h3>
+          <p className="text-lg mb-3 font-semibold text-cyan-800">"To empower families for winsome evangelism"</p>
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-cyan-500">
+              <p className="text-lg"><strong className="text-cyan-800">1.</strong> To preach the gospel of salvation to every family member.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-cyan-500">
+              <p className="text-lg"><strong className="text-cyan-800">2.</strong> To affirm and strengthen every Seventh-day Adventist family as a primary discipline unit.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-cyan-500">
+              <p className="text-lg"><strong className="text-cyan-800">3.</strong> To enable parents and families to increase the likelihood of successful transference of Seventh-day Adventist Christian values to the next generation.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-cyan-500">
+              <p className="text-lg"><strong className="text-cyan-800">4.</strong> To create a "family of God" experience in every Seventh-day Adventist church.</p>
+            </div>
           </div>
         </div>
 

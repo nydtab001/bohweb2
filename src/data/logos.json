@@ -84,15 +84,21 @@
     "title": "Master Guide"
   },
   {
-    "src": "/logos/music-department-logo.png",
-    "alt": "Beacon of Hope Church Music Department logo",
-    "href": "/ministries/music-department",
-    "title": "Music Department"
+    "src": "/logos/possibility-ministries-logo.png",
+    "alt": "Beacon of Hope Church Possibility Ministries logo",
+    "href": "/ministries/possibility-ministries",
+    "title": "Possibility Ministries"
   },
   {
     "src": "/logos/education-department-logo.png",
     "alt": "Beacon of Hope Bulawayo Education Department logo",
     "href": "/ministries/education-department",
     "title": "Education Department"
+  },
+  {
+    "src": "/logos/ambassador-logo.png",
+    "alt": "Adventist Youth Ambassadors logo",
+    "href": "/ministries/adventist-youth-ministries#ambassadors",
+    "title": "Ambassadors"
   }
 ]

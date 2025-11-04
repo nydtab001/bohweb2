@@ -26,21 +26,42 @@ function Education() {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-2xl font-bold mb-3 text-sky-900">Our Mission</h3>
-          <p className="text-lg mb-3">To promote, support, and strengthen Seventh-day Adventist education, ensuring that children and youth receive a Christ-centered education that develops their full potential for service to God and humanity.</p>
+          <h3 className="text-2xl font-bold mb-3 text-sky-900">Our Purpose</h3>
+          <p className="text-lg mb-3">The Seventh-day Adventist Church, through its educational program, wishes to help young people prepare for effective citizenship on this earth, and a rewarding citizenship on the new earth.</p>
           <div className="bg-sky-50 p-5 rounded-lg">
             <p className="text-lg italic text-sky-900">"Train up a child in the way he should go; even when he is old he will not depart from it." - Proverbs 22:6</p>
           </div>
         </div>
 
         <div className="mb-6">
-          <h3 className="text-2xl font-bold mb-3 text-sky-900">Philosophy of Adventist Education</h3>
-          <div className="space-y-3">
-            <p className="text-lg"><strong>God-Centered Worldview:</strong> All subjects are taught from a biblical perspective, recognizing God as Creator, Sustainer, and Redeemer.</p>
-            <p className="text-lg"><strong>Holistic Development:</strong> Addressing the physical, mental, social, and spiritual needs of each student.</p>
-            <p className="text-lg"><strong>Excellence in Academics:</strong> Providing rigorous, high-quality education that prepares students for higher learning and life success.</p>
-            <p className="text-lg"><strong>Character Formation:</strong> Developing Christian values, integrity, and service-oriented leadership.</p>
-            <p className="text-lg"><strong>Eternal Perspective:</strong> Preparing students not only for useful citizenship on earth but for eternal life in God's kingdom.</p>
+          <h3 className="text-2xl font-bold mb-3 text-sky-900">The Aim of True Education</h3>
+          <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg mb-4">
+            <p className="text-lg mb-3 font-semibold text-sky-900">The aim of true education is to restore human beings into the image of God as revealed by the life of Jesus Christ. Only through the guidance of the Holy Spirit can this be accomplished.</p>
+            <p className="text-lg text-gray-700">An education of this kind imparts far more than academic knowledge. It fosters a balanced development of the whole person—spiritual, physical, intellectual, and social-emotional—a process that spans a lifetime.</p>
+          </div>
+          <p className="text-lg">Working together, homes, schools, and churches cooperate with divine agencies to prepare learners to be good citizens in this world and for eternity.</p>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="text-2xl font-bold mb-3 text-sky-900">Our Educational Philosophy</h3>
+          <p className="text-lg mb-4">The educational program attaches great importance to building the character and spiritual foundation of the lives of children and young people. Moreover, it makes abundant provision for the acquisition and interpretation of what is appropriate from the accumulation of common secular knowledge and skills for mental, social, vocational, and physical development.</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-sky-500">
+              <h4 className="text-xl font-semibold mb-2 text-sky-800">Spiritual Development</h4>
+              <p className="text-gray-700">Building a personal relationship with God and understanding biblical principles as the foundation for all learning.</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-sky-500">
+              <h4 className="text-xl font-semibold mb-2 text-sky-800">Physical Development</h4>
+              <p className="text-gray-700">Promoting health, wellness, and physical fitness as stewardship of the body as God's temple.</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-sky-500">
+              <h4 className="text-xl font-semibold mb-2 text-sky-800">Intellectual Development</h4>
+              <p className="text-gray-700">Providing academic excellence and critical thinking skills necessary for lifelong learning and success.</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-sky-500">
+              <h4 className="text-xl font-semibold mb-2 text-sky-800">Social-Emotional Development</h4>
+              <p className="text-gray-700">Nurturing character, interpersonal skills, and emotional intelligence for healthy relationships and community life.</p>
+            </div>
           </div>
         </div>
 
@@ -50,7 +71,6 @@ function Education() {
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li className="text-lg"><strong>Primary Schools:</strong> Elementary education (Grade 1-7) with integrated Christian values</li>
             <li className="text-lg"><strong>Secondary Schools:</strong> High school education (Form 1-6) preparing for O-Level and A-Level examinations</li>
-            <li className="text-lg"><strong>Colleges & Universities:</strong> Higher education institutions including Solusi University</li>
             <li className="text-lg"><strong>Vocational Training Centers:</strong> Skills development in various trades and professions</li>
           </ul>
         </div>
@@ -89,18 +109,6 @@ function Education() {
               <p className="text-lg">Seminars on topics like supporting student learning, discipline, teen challenges, and preparing for college.</p>
             </div>
           </div>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-2xl font-bold mb-3 text-sky-900">Scholarship & Financial Aid Programs</h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li className="text-lg">Church-sponsored scholarships for deserving students</li>
-            <li className="text-lg">Annual education fundraising events and campaigns</li>
-            <li className="text-lg">Worthy student employment opportunities</li>
-            <li className="text-lg">Matching grants and donor sponsorships</li>
-            <li className="text-lg">Conference and union scholarship programs</li>
-            <li className="text-lg">Financial counseling for families planning education expenses</li>
-          </ul>
         </div>
 
         <div className="mb-6">

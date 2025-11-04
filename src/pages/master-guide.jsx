@@ -42,7 +42,7 @@ function MasterGuide() {
             <div>
               <h4 className="text-xl font-semibold mb-2 text-green-800">Prerequisites</h4>
               <ul className="list-disc list-inside space-y-1 ml-4">
-                <li className="text-lg">Be at least 18 years old</li>
+                <li className="text-lg">Be at least 16 years old to start the program and 18 years old to be invested</li>
                 <li className="text-lg">Be a baptized Seventh-day Adventist church member in regular standing</li>
                 <li className="text-lg">Hold current Pathfinder Leadership or Staff Training certification</li>
                 <li className="text-lg">Have served actively in youth ministry for at least two years</li>

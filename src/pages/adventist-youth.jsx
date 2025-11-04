@@ -5,8 +5,25 @@ import SectionHeading from "../components/SectionHeading";
 import Footer from "../components/Footer";
 import MinistryLayout from "../components/MinistryLayout";
 import logos from '../data/logos.json';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function YouthMinistries() {
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [hash]);
+
   return (
     <>
     <Helmet>
@@ -22,7 +39,8 @@ function YouthMinistries() {
       <MinistryLayout image={logos[5].src} director={{ name: "John Doe", photo: "/images/john_doe.jpg" }}>
         <div className="mb-6">
           <p className="text-lg mb-4">Adventist Youth Ministries (AYM) at Beacon of Hope exists to lead young people into a saving relationship with Jesus Christ and help them embrace His mission for their lives. We believe that youth are not just the church of tomorrow—they are the church of today, with unique gifts, energy, and passion to make a difference in the world.</p>
-          <p className="text-lg">Through dynamic programs, meaningful relationships, and authentic worship experiences, we create spaces where teens and young adults can explore their faith, discover their purpose, and be equipped for ministry and leadership.</p>
+          <p className="text-lg mb-4">Through dynamic programs, meaningful relationships, and authentic worship experiences, we create spaces where teens and young adults can explore their faith, discover their purpose, and be equipped for ministry and leadership.</p>
+          <p className="text-lg">AYM includes our <a href="#ambassadors" className="text-blue-700 font-semibold underline hover:text-blue-900 transition-colors">Adventist Youth Ambassadors</a> program (ages 16-20+), dedicated to meeting the spiritual, social, and lifestyle needs of youth by challenging them to experience and share a personal relationship with Christ.</p>
         </div>
 
         <div className="mb-6">
@@ -193,6 +211,129 @@ function YouthMinistries() {
         </div>
       </MinistryLayout>
     </Section>
+
+    {/* Ambassadors Section */}
+    <div id="ambassadors" className="scroll-mt-24 md:scroll-mt-[113px]">
+      <SectionHeading title="Ambassadors" bg="bg-rose-950" colour="text-amber-400"/>
+    </div>
+    <Section>
+      <MinistryLayout image={logos[16].src} director={{ name: "John Doe", photo: "/images/john_doe.jpg" }}>
+        <div className="space-y-6">
+          <div className="bg-rose-50 border-l-4 border-rose-600 p-6 rounded-r-lg">
+            <h3 className="text-2xl font-bold mb-3 text-rose-900">Who Are Ambassadors?</h3>
+            <p className="text-lg text-gray-700 mb-4">
+              The Ambassador Group is an organization of the Seventh-day Adventist Church dedicated to meeting the spiritual, social, and lifestyle needs of youth ages 16-20+ by challenging them to experience and share a personal relationship with Christ, develop a lifestyle fitting their belief system and vocational interest, and providing them with an adequate venue for wholesome development of lifelong friendships.
+            </p>
+            <div className="bg-white p-5 rounded-lg shadow-sm mb-3">
+              <h4 className="text-xl font-bold text-rose-800 mb-2">Aim</h4>
+              <p className="text-lg italic text-gray-700 mb-2">"The Advent Message to All the World in My Generation"</p>
+              <p className="text-gray-600">My relationship to Jesus Christ is of such a nature that it compels me to share with any who will receive it, the gospel—the good news of His soon return.</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-sm">
+              <h4 className="text-xl font-bold text-rose-800 mb-2">Motto</h4>
+              <p className="text-lg italic text-gray-700 mb-2">"The Love of Christ Compels Me"</p>
+              <p className="text-gray-600">I am drawn to Him by His exemplary life, the symbolic act of His crucifixion, His conquering resurrection, and His promise of an earth made new in the pattern of the original creation. The closer I find myself to Him, the closer I find myself identifying with the needs of my fellow human beings.</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-rose-900">Our Focus Areas</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-rose-500">
+                <h4 className="text-xl font-semibold text-rose-800 mb-2">Spiritual Development</h4>
+                <p className="text-gray-600">
+                  Experiencing and sharing a personal relationship with Christ, compelling us to share the gospel—the good news of His soon return—with our generation.
+                </p>
+              </div>
+
+              <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-rose-500">
+                <h4 className="text-xl font-semibold text-rose-800 mb-2">Lifestyle & Vocational Growth</h4>
+                <p className="text-gray-600">
+                  Developing a lifestyle fitting our belief system and vocational interests, preparing for meaningful careers while maintaining Christian values.
+                </p>
+              </div>
+
+              <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-rose-500">
+                <h4 className="text-xl font-semibold text-rose-800 mb-2">Social & Friendship</h4>
+                <p className="text-gray-600">
+                  Providing an adequate venue for wholesome development of lifelong friendships built on shared faith, values, and commitment to Christ.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold mb-3 text-rose-900">Joining Ambassadors</h3>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-lg mb-4 text-gray-700"><strong>Age Requirement:</strong> Youth ages 16-20+ who are committed to the Ambassador vision</p>
+              <p className="text-lg mb-4 text-gray-700">Ambassadors embody:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-rose-600 font-bold mr-3 text-xl">•</span>
+                  <span><strong>Personal Relationship with Christ:</strong> A compelling relationship that drives them to share the gospel with their generation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-rose-600 font-bold mr-3 text-xl">•</span>
+                  <span><strong>Christ-Centered Lifestyle:</strong> A lifestyle fitting their belief system, demonstrating Christian values in all areas of life</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-rose-600 font-bold mr-3 text-xl">•</span>
+                  <span><strong>Vocational Development:</strong> Actively pursuing their vocational interests while maintaining spiritual priorities</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-rose-600 font-bold mr-3 text-xl">•</span>
+                  <span><strong>Commitment to Fellowship:</strong> Dedication to building and maintaining wholesome, lifelong friendships within the faith community</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-rose-600 font-bold mr-3 text-xl">•</span>
+                  <span><strong>Love That Compels:</strong> Motivated by the love of Christ to identify with and meet the needs of their fellow human beings</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold mb-3 text-rose-900">Ambassador Activities</h3>
+            <ul className="list-disc list-inside space-y-2 ml-4 text-gray-700">
+              <li className="text-lg">Speaking and presenting at youth events and church services</li>
+              <li className="text-lg">Organizing and leading outreach programs and evangelistic campaigns</li>
+              <li className="text-lg">Representing the church at conferences, youth congresses, and camp meetings</li>
+              <li className="text-lg">Leading worship, prayer meetings, and Bible study groups</li>
+              <li className="text-lg">Coordinating community service projects and mission trips</li>
+              <li className="text-lg">Creating content for social media and digital ministry platforms</li>
+              <li className="text-lg">Training and mentoring emerging youth leaders</li>
+              <li className="text-lg">Serving as liaisons between youth and church leadership</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-r from-rose-700 to-rose-900 text-white p-8 rounded-lg shadow-xl">
+            <h3 className="text-2xl font-bold mb-4">Join the Ambassador Movement</h3>
+            <p className="text-lg mb-4">
+              Are you passionate about Jesus and ready to make a difference? Do you want to use your gifts and influence to impact your 
+              generation for Christ? Consider becoming an Adventist Youth Ambassador!
+            </p>
+            <p className="text-lg mb-6">
+              Speak with our Youth Ministries director or Ambassadors coordinator to learn more about selection, training, and opportunities 
+              to serve as an Ambassador for Christ.
+            </p>
+            <div className="text-center">
+              <a 
+                href="/contact" 
+                className="inline-block bg-white text-rose-700 font-bold py-3 px-8 rounded-full hover:bg-rose-50 transition-colors duration-300 shadow-lg"
+              >
+                Get Involved
+              </a>
+            </div>
+          </div>
+
+          <div className="text-center italic text-gray-600 text-lg border-t pt-6">
+            <p className="font-semibold text-rose-800">"We are therefore Christ's ambassadors, as though God were making his appeal through us."</p>
+            <p className="text-sm mt-2">- 2 Corinthians 5:20</p>
+          </div>
+        </div>
+      </MinistryLayout>
+    </Section>
+
     <Footer/>
     </>
   );
