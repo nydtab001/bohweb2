@@ -64,6 +64,16 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a
+                href="https://www.tiktok.com/@beaconofhopesda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                TikTok
+              </a>
+            </li>
+            <li>
               <a href="mailto:beaconofhope@wzc.adventist.org" className="hover:underline">
                 Email
               </a>
